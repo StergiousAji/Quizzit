@@ -4,4 +4,4 @@ from django.shortcuts import render
 def home(request):
     context_dict = {}
     
-    return render(request, 'quizzit/Home.html', context_dict)
+    return render(request, 'quizzit/home.html', context_dict)
