@@ -1,0 +1,23 @@
+body.background { background-color: #56dbaf; }
+div.userButtons {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+}
+button.userButtons {
+    position: relative;
+    margin: 6px 7px;
+    font-size: 16px;
+    width: 110px;
+    height: 48px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#btnSignUp {
+    background-color: #67298b;
+}
+#btnLogin { 
+    background-color: #af02af;
+}

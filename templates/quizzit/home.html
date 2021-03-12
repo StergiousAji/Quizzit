@@ -1,10 +1,16 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Quizzit Home</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
 </head>
-<body>
-    <h1>QUIZZIT</h1>
-    <h3>This is just a test of the home page to see if it works :)</h3>
+<body class="background">
+    <h1>QUIZZIT LOGO</h1>
+    <div class="userButtons">
+	    <button class="userButtons" id="btnSignUp">Sign Up</button>
+	    <button class="userButtons" id="btnLogin">Log in</button>
+    </div>
 </body>
 </html>
