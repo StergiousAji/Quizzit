@@ -93,3 +93,12 @@ button.right-buttons {
 .dropdown:hover .dropdown-categories {
     display: block;
 }
+
+div.Logo-image {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    text-align:center;
+}
