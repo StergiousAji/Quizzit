@@ -7,7 +7,7 @@ div.header {
     padding: 20px;
     margin: -8px;
     height: 50px;
-    background-color: #b88a4e;
+    background-color: #14b97a;
 }
 input#search-box {
     padding: 10px;
@@ -49,7 +49,7 @@ div.menu-area{
     align-items: center;
     justify-content: center;
     color: #fff;
-    background: #cb3529;
+    background: #0eb98f;
     height: 50px;
     font-family:Poppins;
     font-weight: bold;
@@ -91,6 +91,17 @@ div.menu-area{
     width: 100%;
 }
   
+div.Logo-image {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    text-align:center;
+}
+
+
+
 #btnSignUp { background-color: #67298b; }
 #btnSignUp:hover { background-color: #812bb3;}
 #btnLogin { background-color: #af02af;}
