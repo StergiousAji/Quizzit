@@ -38,52 +38,59 @@ button.right-buttons {
     cursor: pointer;
 }
 
+div.menu-area{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-
-  .dropbtn {
-    background-color: #af4c8e;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.menu-area a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #cb3529;
+    height: 50px;
+    font-family:Poppins;
+    font-weight: bold;
     text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #8e3e7d;}
+    text-transform: uppercase;
 
+}
+
+.menu-area a:hover {
+    background: tomato;
+    color: #fff;
+}
+
+.menu-area ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu-area ul li{
+    position:relative;
+    width: 100%;
+    text-align: center;
+
+}
+
+.menu-area li:hover .dropdown-1 li{
+    top: 0;
+    display: block;
+}
+.dropdown-1 ul li{
+    display:none;
+    position: relative;
+}
+
+.dropdown-1 {
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+  
 #btnSignUp { background-color: #67298b; }
 #btnSignUp:hover { background-color: #812bb3;}
 #btnLogin { background-color: #af02af;}
