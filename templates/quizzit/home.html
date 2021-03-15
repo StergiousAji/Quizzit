@@ -6,11 +6,19 @@
     <title>Quizzit Home</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
 </head>
-<body class="background">
-    <h1>QUIZZIT LOGO</h1>
-    <div class="userButtons">
-	    <button class="userButtons" id="btnSignUp">Sign Up</button>
-	    <button class="userButtons" id="btnLogin">Log in</button>
+<body>
+    <div class="header">
+        <div id="logo-container">
+            <h1>QUIZZIT</h1>
+        </div>
+        <div id="center-content">
+            <input id="search-box" type="text" placeholder="Search">
+            <!--<button id="btnSearch">Search</button>-->
+        </div>
+        <div id="right-content">
+            <button class="right-buttons" id="btnSignUp">Sign Up</button>
+	        <button class="right-buttons" id="btnLogin">Log in</button>
+        </div>
     </div>
 </body>
 </html>
