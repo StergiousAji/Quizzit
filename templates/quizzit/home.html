@@ -9,7 +9,10 @@
 <body>
     <div class="header">
         <div id="logo-container">
-            <img id="header-logo" src="{% static 'images/Quizzit_Logo.png' %}" alt="Quizzit-Logo-Header">
+            <p><a href="{% url 'quizzit:home' %}">
+                <img id="header-logo" src="{% static 'images/Quizzit_Logo.png' %}" alt="Quizzit-Logo-Header">
+                </a></p>
+            
         </div>
         <div id="center-content">
             <input id="search-box" type="text" placeholder="Search">
