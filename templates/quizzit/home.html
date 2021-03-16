@@ -9,7 +9,9 @@
 <body>
     <div class="header">
         <div id="logo-container">
-            <img id="header-logo" src="{% static 'images/Quizzit_Logo.png' %}" alt="Quizzit-Logo-Header">
+            <a href="{% url 'quizzit:home' %}">
+                <img id="header-logo" src="{% static 'images/Quizzit_Logo.png' %}" alt="Quizzit-Logo-Header">
+            </a>
         </div>
         <div id="center-content">
             <input id="search-box" type="text" placeholder="Search">
@@ -42,16 +44,19 @@
     <div class="slideshow-container">
     
         <div class="mySlides fade">
-            <div class="rectangle1"></div>
+            <div class="rectangles" id="rectangle1">
+                <div class="text">
+                    <h2>Popular Quizzes</h2>
+                </div>
             </div>
-        
-        <div class="mySlides fade">
-            <div class="rectangle2"></div>
-     
         </div>
         
         <div class="mySlides fade">
-            <div class="rectangle3"></div>
+            <div class="rectangles" id="rectangle2"></div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="rectangles" id="rectangle3">
         </div>
         
         </div>
