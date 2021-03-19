@@ -1,48 +1,17 @@
+{% extends 'quizzit/base.html' %}
 {% load staticfiles %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Quizzit Home</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
-</head>
-<body>
-    <div class="header">
-        <div id="logo-container">
-            <a href="{% url 'quizzit:home' %}">
-                <img id="header-logo" src="{% static 'images/Quizzit_Logo.png' %}" alt="Quizzit-Logo-Header">
-            </a>
-        </div>
-        <div id="center-content">
-            <input id="search-box" type="text" placeholder="Search">
-            <!--<button id="btnSearch">Search</button>-->
-        </div>
-        <div id="right-content">
-            <button class="right-buttons" id="btnSignUp">Sign Up</button>
-	        <button class="right-buttons" id="btnLogin">Log in</button>
-        </div>
-    </div>
+{% block link_block %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+{% endblock %}
 
-    <div class="navbar">
-        <div class="dropdown">
-            <a id="categories" href="#categories">Categories</a>
-            <div class="dropdown-categories">
-                <a href="#history">History</a>
-                <a href="#geography">Geography</a>
-                <a href="#sport">Sport</a>
-            </div>
-        </div>
-        <a href="#howtoplay">How to Play</a>
-        <a href="#leaderboard">Leaderboard</a>
-        <a href="#about">About</a>
-    </div>
-    
+{% block body_block %}
     <div class='Logo-image'>
         <img id="center-logo" src="{% static 'images/Quizzit_Logo.png' %}" alt="Quizzit-Logo">
     </div>
 
     <div class="slideshow-container">
-    
+
         <div class="mySlides fade">
             <div class="rectangles" id="rectangle1">
                 <div class="text">
@@ -50,45 +19,44 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="mySlides fade">
             <div class="rectangles" id="rectangle2"></div>
         </div>
-        
+
         <div class="mySlides fade">
             <div class="rectangles" id="rectangle3">
         </div>
-        
+
         </div>
         <br>
-        
+
         <div style="text-align:center">
           <span class="dot"></span> 
           <span class="dot"></span> 
           <span class="dot"></span> 
         </div>
-        
+
         <script>
         var slideIndex = 0;
         showSlides();
         
         function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 5000); 
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000); 
         }
         </script>
     </div>
-</body>
-</html>
+{% endblock %}

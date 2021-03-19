@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>
+        Quizzit - 
+        {% block title_block %}
+            Home
+        {% endblock %} 
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+    {% block link_block %}
+    {% endblock %}
+</head>
+
+<body>
+    <!--HEADER AND NAVIGATION BAR-->
+    <div class="header">
+        <div id="logo-container">
+            <a href="{% url 'quizzit:home' %}">
+                <img id="header-logo" src="{% static 'images/Quizzit_Logo.png' %}" alt="Quizzit-Logo-Header">
+            </a>
+        </div>
+        <div id="center-content">
+            <input id="search-box" type="text" placeholder="Search">
+            <button id="btnSearch" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="right-content">
+            <button class="right-buttons" id="btnSignUp">Sign Up</button>
+	        <button class="right-buttons" id="btnLogin">Log in</button>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="dropdown">
+            <a id="categories" href="#categories">Categories</a>
+            <div class="dropdown-categories">
+                <a href="#history">History</a>
+                <a href="#geography">Geography</a>
+                <a href="#sport">Sport</a>
+            </div>
+        </div>
+        <a href="#howtoplay">How to Play</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#about">About</a>
+    </div>
+
+    <div>
+        {% block body_block %}
+        {% endblock %}
+    </div>
+</body>
+</html>
