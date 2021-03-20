@@ -5,5 +5,6 @@ app_name = 'quizzit'
 
 urlpatterns = [
     path('', views.home, name='home'),
-    # path('about/', views.about, name='about'),
+    path('about/', views.about, name='about'),
+    path('categories/', views.categories, name='categories'),
 ]

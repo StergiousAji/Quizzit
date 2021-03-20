@@ -34,7 +34,7 @@
     </div>
     <div class="navbar">
         <div class="dropdown">
-            <a id="categories" href="#categories">Categories</a>
+            <a id="categories" href="{% url 'quizzit:categories' %}">Categories</a>
             <div class="dropdown-categories">
                 <a href="#history">History</a>
                 <a href="#geography">Geography</a>
@@ -43,7 +43,7 @@
         </div>
         <a href="#howtoplay">How to Play</a>
         <a href="#leaderboard">Leaderboard</a>
-        <a href="#about">About</a>
+        <a href="{% url 'quizzit:about' %}">About</a>
     </div>
 
     <div>
