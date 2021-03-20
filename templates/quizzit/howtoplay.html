@@ -1,0 +1,25 @@
+{% extends 'quizzit/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    How To Play
+{% endblock %}
+
+
+{% block link_block %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/howtoplay.css' %}"/>
+{% endblock %}
+
+{% block body_block %}
+    <div style="font-family: 'Trebuchet MS'; text-align: center">
+        <h1><u>How To Play</u></h1>
+            <p style= "font-size: 22px">
+                All users will be able to play a quiz. Just head to the Categories section and pick your quiz. <br/><br/>
+                Each user will have a set time to play and complete a quiz. For unregistered users, the hardened difficult is locked. As well as this, your scores will not be added to the leaderboards, so register! <br/><br/>
+                You will be able to see how well you did compared to others after completing the quiz. <br/><br/>
+                Once you complete or attempt a quiz, you will not be able to play that quiz for another 24 hours.
+            </p>
+
+
+                
+{% endblock %}

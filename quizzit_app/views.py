@@ -17,3 +17,9 @@ def categories(request):
     context_dict = {'categories': category_list,}
     
     return render(request, 'quizzit/categories.html', context_dict)
+
+
+def howtoplay(request):
+    context_dict = {}
+    
+    return render(request, 'quizzit/howtoplay.html', context_dict)
