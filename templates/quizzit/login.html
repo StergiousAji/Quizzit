@@ -1,0 +1,42 @@
+{% extends 'quizzit/base.html' %}
+{% load staticfiles %}
+
+{% block link_block %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
+{% endblock %}
+
+{% block title_block %}
+    Login
+{% endblock %}
+
+{% block body_block %}
+    <!-- <h1>Login</h1>
+    <form id="login_form" method="post" action="{% url 'quizzit:login' %}">
+        {% csrf_token %}
+        Username: <input type="text" name="username" value="" size="50" />
+        <br />
+        Password: <input type="password" name="password" value="" size="50" />
+        <br />
+        <input type="submit" value="submit" />
+    </form> -->
+
+    {% if invalid_login %}
+        <h1 class="invalid">INVALID LOGIN</h1>
+    {% else %}
+        <form id="login_form" method="post" action="{% url 'quizzit:login' %}">
+            {% csrf_token %}
+            <div class="container">
+              <h1>Login</h1>
+              <hr>
+            
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" id="txtUsername" required>
+            
+              <label for="password"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password" id="txtPassword" required>
+
+              <button type="submit" class="btnLogin">Login</button>
+            </div>
+        </form>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+.register-fields {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Trebuchet MS';
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
+
+#btnHome {
+    margin: 6px 7px;
+    font-size: 20px;
+    padding: 17px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #df7c2b; 
+}
+#btnHome:hover { background-color: #e79c5e;}
+
+#btnRegister { 
+    margin: 6px 7px;
+    font-size: 20px;
+    padding: 17px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #67298b; 
+}
+#btnRegister:hover { background-color: #812bb3;}

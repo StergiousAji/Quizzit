@@ -28,8 +28,12 @@
             <button id="btnSearch" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <div id="right-content">
-            <button class="right-buttons" id="btnSignUp">Sign Up</button>
-	        <button class="right-buttons" id="btnLogin">Log in</button>
+            <a href="{% url 'quizzit:register' %}">
+                <button class="right-buttons" id="btnSignUp">Sign Up</button>
+            </a>
+            <a href="{% url 'quizzit:login' %}">
+	            <button class="right-buttons" id="btnLogin">Log in</button>
+            </a>
         </div>
     </div>
     <div class="navbar">
