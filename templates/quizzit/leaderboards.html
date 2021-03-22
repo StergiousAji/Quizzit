@@ -1,0 +1,105 @@
+{% extends 'quizzit/base.html' %}
+{% load staticfiles %}
+
+{% block link_block %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/leaderboards.css' %}"/>
+{% endblock %}
+
+{% block body_block %}
+    <div class="search-container">
+        <input id="search-box" type="text" placeholder="Search Categories">
+        <button id="btnSearch" type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <h1>Category</h1>
+    <div class="leaderboards">
+        <div id="ldEasy">
+            <h1>EASY</h1>
+            <table class="scroll">
+                <thead>
+                <tr>
+                    <th scope="col" colspan="1">Rank</th>
+                    <th scope="col" colspan="1">Username</th>
+                    <th scope="col" colspan="1">Score</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Siva</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Raman</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sivaraman</td>
+                    <td>50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="ldMedium">
+            <h1>MEDIUM</h1>
+            <table class="scroll">
+                <thead>
+                <tr>
+                    <th scope="col" colspan="1">Rank</th>
+                    <th scope="col" colspan="1">Username</th>
+                    <th scope="col" colspan="1">Score</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Siva</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Raman</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sivaraman</td>
+                    <td>50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="ldHard">
+            <h1>HARD</h1>
+            <table class="scroll">
+                <thead>
+                <tr>
+                    <th scope="col" colspan="1">Rank</th>
+                    <th scope="col" colspan="1">Username</th>
+                    <th scope="col" colspan="1">Score</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Siva</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Raman</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sivaraman</td>
+                    <td>50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

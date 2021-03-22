@@ -88,3 +88,8 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect(reverse('rango:index'))
+
+def leaderboards(request):
+    context_dict = {}
+    
+    return render(request, 'quizzit/leaderboards.html', context_dict)
