@@ -1,4 +1,6 @@
 from django.db import models
+from django.template.defaultfilters import slugify
+from django.contrib.auth.models import User
 
 
 class Register_User(models.Model):
@@ -57,3 +59,10 @@ class Record(models.Model):
 
     def __str__(self):
         return f'{self.username}, {self.quizID}'  
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    picture = models.ImageField(upload_to='profile_images', blank=True)
+    
+    def __str__(self):
+        return self.user.username
