@@ -8,6 +8,8 @@ class Register_User(models.Model):
     email = models.CharField(max_length=60)
     password = models.CharField(max_length=35)
     admin = models.BooleanField(default=False)
+    picture = models.ImageField(upload_to='profile_images', blank=True)
+
 
     class Meta:
         verbose_name_plural = 'Register Users'
@@ -59,6 +61,7 @@ class Record(models.Model):
 
     def __str__(self):
         return f'{self.username}, {self.quizID}'  
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
