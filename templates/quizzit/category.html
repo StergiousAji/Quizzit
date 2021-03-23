@@ -1,0 +1,27 @@
+{% extends 'quizzit/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    {% if category %}
+        {{ category.name }}
+    {% else %}
+        Unknown Category
+    {% endif %}
+{% endblock %}
+
+{% block link_block %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/category.css' %}"/>
+{% endblock %}
+
+{% block body_block %}
+    {% if category %}
+        <h1>{{ category.name }}</h1>
+        <div class="buttons-container">
+            <button id="btnEasy">Easy</button>
+            <button id="btnMedium">Medium</button>
+            <button id="btnHard">Hard</button>
+        </div>
+    {% else %}
+        The specified category does not exist.
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,29 @@
+div.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+button {
+    font-size: 30px;
+    border-radius: 7px;
+    border: 4px solid black;
+    cursor: pointer;
+    width: 100%;
+    height: 100px;
+    font-weight: bold;
+}
+
+#btnEasy { background-color: green; }
+#btnEasy:hover { background-color: rgb(6, 180, 6); }
+#btnMedium { background-color: rgb(255, 208, 0); }
+#btnMedium:hover { background-color: rgb(240, 213, 95); }
+#btnHard { background-color: rgb(192, 10, 10); }
+#btnHard:hover { background-color: rgb(241, 56, 56); }

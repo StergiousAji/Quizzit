@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from quizzit_app.models import UserProfile
+from quizzit_app.models import Category, Record, Quiz, Register_User, UserProfile
 from quizzit_app.forms import UserForm, UserProfileForm
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
@@ -25,6 +25,29 @@ def categories(request):
     
     return render(request, 'quizzit/categories.html', context_dict)
 
+def show_category(request, category_name_slug):
+    context_dict = {}
+    # .get() method returns only one object or a DoesNotExist exception
+    try:
+        category = Category.objects.get(slug=category_name_slug)
+
+        context_dict['category'] = category
+    except Category.DoesNotExist:
+        context_dict['category'] = None
+
+    return render(request, 'quizzit/category.html', context=context_dict)
+
+def quiz(request):#, quiz_name_slug):
+    context_dict = {}
+    # .get() method returns only one object or a DoesNotExist exception
+    # try:
+    #     quiz = Quiz.objects.get(slug=quiz_name_slug)
+
+    #     context_dict['quiz'] = quiz
+    # except Category.DoesNotExist:
+    #     context_dict['quiz'] = None
+
+    return render(request, 'quizzit/quiz.html', context=context_dict)
 
 def howtoplay(request):
     context_dict = {}

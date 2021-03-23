@@ -21,6 +21,11 @@ class Register_User(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=30, unique=True)
+    slug = models.SlugField(unique=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Categories'
@@ -41,7 +46,11 @@ class Quiz(models.Model):
     difficulty = models.CharField(max_length=15, choices=difficulty_choices)
     questions = models.CharField(max_length=100)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    slug = models.SlugField(unique=True)
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Quiz, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Quizzes'

@@ -1,4 +1,6 @@
-body { background-color: #56dbaf; }
+body { 
+    background-color: #56dbaf;
+}
 /*HEADER */
 div.header {
     display: flex;
@@ -10,6 +12,7 @@ div.header {
     background-color: #b88a4e;
 }
 img#header-logo {
+    position: relative;
     width: 70%;
     height: 70%;
     cursor: pointer;
@@ -25,6 +28,7 @@ input#search-box {
     font-size: 19px;
 }
 #btnSearch {
+    position: relative;
     margin-left: -4px;
     font-size: 16px;
     height: 42px;

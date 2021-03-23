@@ -1,0 +1,92 @@
+/* div.question-container {
+} */
+body {
+    font-family:'Trebuchet MS';
+}
+#ten-countdown {
+    border: 5px solid #000000;
+    display: inline-flex;
+    padding: 5px;
+    color: #000000;
+    font-family: Verdana, sans-serif, Arial;
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(250, 250, 250);
+    margin-top: 60px;
+    margin-left: 20px;
+    height: 80px;
+    position: relative;
+}
+
+h1.txtQuestion {
+    font-size: 60px;
+    border-radius: 9px;
+    border: 2px solid black;
+    background-color: white;
+    margin: 50px;
+    margin-top: -160px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    word-break: normal;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+div.multiple-choice-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div.multiple-choice-container button {
+    font-size: 30px;
+    padding: 40px;
+    width: 600px;
+    margin: 20px;
+    border-radius: 7px;
+    height: 180px;
+    cursor: pointer;
+    border: 7px solid black;
+}
+
+#btnAnswer1 { background-color: #2676c0; }
+#btnAnswer1:hover {background-color: #4095e6; }
+#btnAnswer2 { background-color: #099249; }
+#btnAnswer2:hover {background-color: #2dd37a; }
+#btnAnswer3 { background-color: #c8293e; }
+#btnAnswer3:hover { background-color: #e64056; }
+#btnAnswer4 { background-color: #e0cd1c; }
+#btnAnswer4:hover { background-color: #e2d45b; }
+
+div.control-question-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+div.control-question-container a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+div.control-question-container a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+  
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+
