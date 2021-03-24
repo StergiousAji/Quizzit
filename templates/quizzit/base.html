@@ -40,7 +40,10 @@
         <div class="dropdown">
             <a id="categories" href="{% url 'quizzit:categories' %}">Categories</a>
             <div class="dropdown-categories">
-                <a href="#history">History</a>
+                {% for c in categories %}
+                    <a href="{% url 'quizzit:show_category' c.slug %}">{{ c.name }}</a>
+                {% endfor %}
+                <!-- <a href="#history">History</a>
                 <a href="#geography">Geography</a>
                 <a href="#sport">Sport</a>
                 <a href="#sport">Mathematics</a>
@@ -49,7 +52,7 @@
                 <a href="#sport">Physics</a>
                 <a href="#sport">Movies</a>
                 <a href="#sport">Tv Shows</a>
-                <a href="#sport">Chemistry</a>
+                <a href="#sport">Chemistry</a> -->
             </div>
         </div>
         <a href="{% url 'quizzit:howtoplay' %}">How to Play</a>

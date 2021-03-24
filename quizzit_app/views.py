@@ -7,26 +7,26 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
+category_list = Category.objects.all()
+
 # Create your views here.
 def home(request):
-    context_dict = {}
+    context_dict = {'categories': category_list,}
     
     return render(request, 'quizzit/home.html', context_dict)
 
 def about(request):
-    context_dict = {}
+    context_dict = {'categories': category_list,}
     
     return render(request, 'quizzit/about.html', context_dict)
 
 def categories(request):
-    category_list = None
-    # category_list = Category.objects
     context_dict = {'categories': category_list,}
     
     return render(request, 'quizzit/categories.html', context_dict)
 
 def show_category(request, category_name_slug):
-    context_dict = {}
+    context_dict = {'categories': category_list,}
     # .get() method returns only one object or a DoesNotExist exception
     try:
         category = Category.objects.get(slug=category_name_slug)
@@ -38,7 +38,7 @@ def show_category(request, category_name_slug):
     return render(request, 'quizzit/category.html', context=context_dict)
 
 def quiz(request):#, quiz_name_slug):
-    context_dict = {}
+    context_dict = {'categories': category_list,}
     # .get() method returns only one object or a DoesNotExist exception
     # try:
     #     quiz = Quiz.objects.get(slug=quiz_name_slug)
@@ -50,7 +50,7 @@ def quiz(request):#, quiz_name_slug):
     return render(request, 'quizzit/quiz.html', context=context_dict)
 
 def howtoplay(request):
-    context_dict = {}
+    context_dict = {'categories': category_list,}
     
     return render(request, 'quizzit/howtoplay.html', context_dict)
 

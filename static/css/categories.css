@@ -16,7 +16,7 @@ h1 {
     background-color: white;
     border-radius: 30px;
 }
-.categories-container button {
+.buttons {
     font-size: 20px;
     margin: 30px;
     height: 150px;
@@ -29,6 +29,6 @@ h1 {
     border-style: solid;
     background-color: #377bb0;
 }
-.categories-container button:hover {
+.buttons:hover {
     background-color: #4196d6;
 }
