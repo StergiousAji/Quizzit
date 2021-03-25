@@ -36,7 +36,7 @@ class Category(models.Model):
 
 
 class Quiz(models.Model):
-    EASY = 'Easy'
+    EASY = 'EASY'
     MED = 'Medium'
     DIFF = 'Difficult'
     difficulty_choices = [(EASY, 'Easy'), (MED, 'Medium'), (DIFF, 'Difficult')]

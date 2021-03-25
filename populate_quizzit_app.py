@@ -53,68 +53,69 @@ def populate():
         print(f'- added Cate: {cate}')
 
 
-    # quiz_list = [
-    #     {'quizID': 1,
-    #      'name': 'Quiz 1',
-    #      'difficulty': 'Easy',
-    #      'question': 'question 1',
-    #      },
+    quiz_list = [
+        {'quizID': 1,
+         'name': 'Quiz 1',
+         'difficulty': 'Easy',
+         'question': 'question 1',
+         },
 
-    #     {'quizID': 2,
-    #      'name': 'Quiz 2',
-    #      'difficulty': 'Medium',
-    #      'question': 'question 2',},
+        {'quizID': 2,
+         'name': 'Quiz 2',
+         'difficulty': 'Medium',
+         'question': 'question 2',},
 
-    #     {'quizID': 3,
-    #      'name': 'Quiz 3',
-    #      'difficulty': 'Difficulty',
-    #      'question': 'question 3',},
-    # ]
-    # quiz_dict = {
-    #    'Category B': quiz_list,
-    # }
+        {'quizID': 3,
+         'name': 'Quiz 3',
+         'difficulty': 'Difficulty',
+         'question': 'question 3',},
+    ]
+    quiz_dict = {
+       'History': quiz_list,
+       'Geography':quiz_list,
+    }
 
-    # for cate, quiz_l in quiz_dict.items():
-    #     cate_obj = Category.objects.get(name=cate)
-    #     for quiz in quiz_l:
-    #         add_quiz(quiz['quizID'], quiz['name'], quiz['difficulty'], quiz['question'], cate_obj)
+    for cate, quiz_l in quiz_dict.items():
+        cate_obj = Category.objects.get(name=cate)
+        for quiz in quiz_l:
+            add_quiz(quiz['quizID'], quiz['name'], quiz['difficulty'], quiz['question'], cate_obj)
 
-    # # Print out the quiz we have added.
-    # for quiz in Quiz.objects.all():
-    #     print(f'- added quiz: {quiz}')
+    # Print out the quiz we have added.
+    for quiz in Quiz.objects.all():
+        print(f'- added quiz: {quiz}')
 
     
-    # record_list = [
-    #     {'username': 'Alice',
-    #      'quizID': 1,
-    #      'score': 10},
-    #     {'username': 'Bob',
-    #      'quizID': 2,
-    #      'score': 20},
-    #     {'username': 'Charlie',
-    #      'quizID': 3,
-    #      'score': 30},
-    # ]
+#     record_list = [
+#         {'username': 'Alice',
+#          'quizID': 1,
+#          'score': 10},
+#         {'username': 'Bob',
+#          'quizID': 2,
+#          'score': 20},
+#         {'username': 'Charlie',
+#          'quizID': 3,
+#          'score': 30},
+#     ]
 
-    # for record in record_list:
-    #     reg_user_obj = Register_User.objects.get(username=record['username'])
-    #     quiz_obj = Quiz.objects.get(quizID=record['quizID'])
+#     for record in record_list:
+#         reg_user_obj = Register_User.objects.get(username=record['username'])
+#         quiz_obj = Quiz.objects.get(quizID=record['quizID'])
 
-    #     add_record(reg_user_obj, quiz_obj, record['score'])
+#         add_record(reg_user_obj, quiz_obj, record['score'])
 
-    # # Print out the cate we have added.
-    # for record in Record.objects.all():
-    #     print(f'- added Record: {record}')
+#     # Print out the cate we have added.
+#     for record in Record.objects.all():
+#         print(f'- added Record: {record}')
 
 
-def add_reg_user(username, email, password, admin=False):
-    reg_user = Register_User.objects.get_or_create(username=username)[0]
-    reg_user.email = email
-    reg_user.password = password
-    reg_user.admin = admin
+# def add_reg_user(username, email, password, admin=False):
+#     reg_user = Register_User.objects.get_or_create(username=username)[0]
+#     reg_user.email = email
+#     reg_user.password = password
+#     reg_user.admin = admin
 
-    reg_user.save()
-    return reg_user
+#     reg_user.save()
+#     return reg_user
 
 
 def add_cate(name):

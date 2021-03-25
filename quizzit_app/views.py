@@ -40,12 +40,11 @@ def show_category(request, category_name_slug):
 def quiz(request):#, quiz_name_slug):
     context_dict = {'categories': category_list,}
     # .get() method returns only one object or a DoesNotExist exception
-    # try:
-    #     quiz = Quiz.objects.get(slug=quiz_name_slug)
-
-    #     context_dict['quiz'] = quiz
-    # except Category.DoesNotExist:
-    #     context_dict['quiz'] = None
+    try:
+        quizzes = Quiz.objects.get(slug=quiz_name_slug)
+        context_dict['quizzes'] = quizzes
+    except Category.DoesNotExist:
+         context_dict['quizzes'] = None
 
     return render(request, 'quizzit/quiz.html', context=context_dict)
 
@@ -113,6 +112,6 @@ def user_logout(request):
     return redirect(reverse('rango:index'))
 
 def leaderboards(request):
-    context_dict = {}
+    context_dict = {'categories': category_list,}
     
     return render(request, 'quizzit/leaderboards.html', context_dict)
