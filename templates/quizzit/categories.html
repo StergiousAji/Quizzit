@@ -1,0 +1,23 @@
+{% extends 'quizzit/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Categories
+{% endblock %}
+
+{% block link_block %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/categories.css' %}"/>
+{% endblock %}
+
+{% block body_block %}
+    <h1><u>Categories</u></h1>
+    <div class="categories-container">
+        {% if categories %}
+            {% for c in categories %}
+                <button class="buttons"><a href="{% url 'quizzit:show_category' c.slug %}">{{ c.name }}</a></button>
+            {% endfor %}
+        {% else %}
+            <h1>There are no categories to show.</h1>
+        {% endif %}
+    </div>
+{% endblock %}
