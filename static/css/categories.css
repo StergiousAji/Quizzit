@@ -28,6 +28,7 @@ h1 {
     border-width: 10px;
     border-style: solid;
     background-color: #377bb0;
+    text-decoration: none;
 }
 .buttons:hover {
     background-color: #4196d6;

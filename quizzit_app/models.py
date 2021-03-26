@@ -44,7 +44,7 @@ class Quiz(models.Model):
     name = models.CharField(max_length=30)
     difficulty = models.CharField(max_length=10, choices=difficulty_choices)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
+    views = models.IntegerField(default=0)
     quizID = models.CharField(max_length=10, unique=True, blank=True)
     slug = models.SlugField(unique=True)
 

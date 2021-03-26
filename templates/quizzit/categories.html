@@ -12,28 +12,12 @@
 {% block body_block %}
     <h1><u>Categories</u></h1>
     <div class="categories-container">
-        {% for c in categories %}
-            <button class="buttons"><a href="{% url 'quizzit:show_category' c.slug %}">{{ c.name }}</a></button>
-        {% endfor %}
-        <!-- {% if category_list %}
-            {% for c in category_list %}
-                <button><strong><a href="{% url 'quizzit:show_category' c.slug %}">{{ c.name }}</a></strong></button>
+        {% if categories %}
+            {% for c in categories %}
+                <button class="buttons"><a href="{% url 'quizzit:show_category' c.slug %}">{{ c.name }}</a></button>
             {% endfor %}
         {% else %}
             <h1>There are no categories to show.</h1>
-        {% endif %} -->
+        {% endif %}
     </div>
-
-    <!-- <div class="categories-container">
-        <button>Button 1</button>
-        <button>Button 1</button>
-        <button>Button 1</button>
-        <button>Button 1</button>
-        <button>Button 1</button>
-        <button>Button 1</button>
-        <button>Button 1</button>
-        <button>Button 1</button>
-        <button>Button 1</button>
-        <button>Button 1</button>
-    </div> -->
 {% endblock %}

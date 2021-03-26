@@ -54,6 +54,7 @@ def populate():
         {'name': 'Quiz 1',
          'difficulty': 'Easy',
          'category': 'History',
+         'views': 20,
          'questions': [
              {'index': 1,
               'text': 'When',
@@ -81,8 +82,9 @@ def populate():
          ],},
 
         {'name': 'Quiz 2',
-         'difficulty': 'Easy',
+         'difficulty': 'Medium',
          'category': 'History',
+         'views': 10,
          'questions': [
              {'index': 1,
               'text': 'When',
@@ -110,8 +112,9 @@ def populate():
          ],},
 
         {'name': 'Quiz 3',
-         'difficulty': 'HARD',
+         'difficulty': 'Hard',
          'category': 'Geography',
+         'views': 20,
          'questions': [
              {'index': 1,
               'text': 'When',
@@ -143,7 +146,7 @@ def populate():
     question_id = 1
     for i,quiz in enumerate(quiz_list):
         cate_obj = Category.objects.get(name=quiz['category'])
-        q = add_quiz(i+1, quiz['name'], quiz['difficulty'], cate_obj) 
+        q = add_quiz(i+1, quiz['name'], quiz['difficulty'], cate_obj, quiz['views']) 
 
         print(f'- added Quiz: {q}')
 
@@ -195,10 +198,10 @@ def add_cate(name):
 
 
 
-def add_quiz(id, name, difficulty, category):
+def add_quiz(id, name, difficulty, category, views):
     quiz = Quiz.objects.get_or_create(id=id, difficulty = difficulty, category=category)[0]
     quiz.name = name
-
+    quiz.views = views
     quiz.save()
     return quiz
 
@@ -239,6 +242,7 @@ def test():
 
     print('--', Quiz.objects.get(id=1).question_set.all())
     print('--', Quiz.objects.get(id=2).question_set.all())
+
 
 
 # Start execution here!
