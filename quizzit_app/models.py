@@ -51,9 +51,10 @@ class Quiz(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
 
-        #_# create quizID field from category and difficulty fields
-        # the id of quizzes with same category name and difficulty level
+        ## create and store the quizID from category and difficulty fields
+        # all the id of quizzes with same category name and difficulty level
         id_list = [q.id for q in Quiz.objects.filter(category__name=self.category.name, difficulty=self.difficulty)]
+        # if the quiz does not exist yet
         if self.id not in id_list:
             count = len(id_list)
             q_ID = '{}-{}-{}'.format(self.category.name[:4].upper(), self.difficulty[0], f'{count+1}'.zfill(2))
@@ -83,7 +84,7 @@ class Question(models.Model):
         verbose_name_plural = 'Questions'
 
     def __str__(self):
-        return f'Question({self.question_text[:20]})'
+        return f'{self.quiz}({self.question_text[:10]})'
 
 
 

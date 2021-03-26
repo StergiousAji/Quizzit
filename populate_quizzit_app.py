@@ -139,12 +139,20 @@ def populate():
          ],},
     ]
 
+    # this is the global question id
+    question_id = 1
     for i,quiz in enumerate(quiz_list):
         cate_obj = Category.objects.get(name=quiz['category'])
         q = add_quiz(i+1, quiz['name'], quiz['difficulty'], cate_obj) 
 
         print(f'- added Quiz: {q}')
 
+        for question in quiz['questions']:
+            que = add_question(question_id, question['index'], question['text'],
+                               question['choiceA'], question['choiceB'], question['choiceC'], 
+                               question['choiceD'], question['answer'], q)
+            question_id += 1
+            print(f'- added Question: {que} to {q}')
 
     
     # record_list = [
@@ -196,9 +204,14 @@ def add_quiz(id, name, difficulty, category):
 
 
 
-def add_question(id, question_text, answer, quiz):
+def add_question(id, index, question_text, choiceA, choiceB, choiceC, choiceD, answer, quiz):
     question = Question.objects.get_or_create(id=id, quiz=quiz)[0]
+    question.index = index
     question.question_text = question_text
+    question.choiceA = choiceA
+    question.choiceB = choiceB
+    question.choiceC = choiceC
+    question.choiceD = choiceD
     question.answer = answer
 
     question.save()
@@ -216,57 +229,16 @@ def add_record(user, quiz, score=0):
 
 
 def test():
-    # quiz_obj = Quiz.objects.get(name='Quiz 1')
-    # add_question('what is it?','A',quiz_obj)
+    quiz_obj = Quiz.objects.get(id=1)
+    print('--', quiz_obj)
 
-    # for que in Question.objects.all():
-    #     print(f'-- added Que: {que}')
-    #     print(f'-- {que.quiz}')
+    # cate_obj = Category.objects.get(name='History').quiz_set.all()
 
-    # print(f"-- {Quiz.objects.filter(category__name='History')}")
-    # print(f"-- {Quiz.objects.filter(category__name='History').count()}")
+    print('--', Category.objects.get(name='History').quiz_set.all())
+    print('--', Quiz.objects.filter(category__name='History', difficulty='Easy'))
 
-    # category = Category.objects.get(name='History')
-    # count = Quiz.objects.filter(category__name=category.name).count()
-    # q_ID = '{}-{}-{}'.format(category.name[:4].upper(), 'HARD'[0], f'{count+1}'.zfill(2))
-
-    # print(f'-- {q_ID}')
-    quiz_list = [
-        {'name': 'Quiz 3',
-         'difficulty': 'HARD',
-         'category': 'Geography',
-         'question': [
-             {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
- 
-             {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
- 
-              {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
-         ],},
-    ] 
-
-    i = 0
-    cate_obj = Category.objects.get(name=quiz['category'])
-
-    q = add_quiz(i, quiz['name'], quiz['difficulty'], cate_obj) 
-
-    print(f'-- added Quiz: {q}')
-    print(f'-- {q.quizID}')
-
+    print('--', Quiz.objects.get(id=1).question_set.all())
+    print('--', Quiz.objects.get(id=2).question_set.all())
 
 
 # Start execution here!
@@ -274,6 +246,7 @@ if __name__ == '__main__':
     print('Starting quizzit_app population script...')
     populate()
     # test()
+
 
 
     
