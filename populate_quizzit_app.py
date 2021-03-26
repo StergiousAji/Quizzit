@@ -234,33 +234,7 @@ def test():
     # q_ID = '{}-{}-{}'.format(category.name[:4].upper(), 'HARD'[0], f'{count+1}'.zfill(2))
 
     # print(f'-- {q_ID}')
-    quiz_list = [
-        {'name': 'Quiz 3',
-         'difficulty': 'HARD',
-         'category': 'Geography',
-         'question': [
-             {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
- 
-             {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
- 
-              {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
-         ],},
-    ] 
+    
 
     i = 0
     cate_obj = Category.objects.get(name=quiz['category'])

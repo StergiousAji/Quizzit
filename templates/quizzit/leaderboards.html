@@ -6,10 +6,7 @@
 {% endblock %}
 
 {% block body_block %}
-    <div class="search-container">
-        <input id="search-box" type="text" placeholder="Search Categories">
-        <button id="btnSearch" type="submit"><i class="fa fa-search"></i></button>
-    </div>
+    
     <h1>Category</h1>
     <div class="leaderboards">
         <div id="ldEasy">
@@ -100,6 +97,12 @@
                 </tbody>
             </table>
         </div>
+        
+    </div>
+    <div class="leaderboard_buttons">
+        <a class="previous" onclick="history.back(-1)">&#8249; Previous</a>
+        <p>1/10</p>
+        <a class="next">Next &#8250;</a>
     </div>
 
 {% endblock %}

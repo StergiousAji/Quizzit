@@ -86,7 +86,7 @@ def register(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
     
-    return render(request, 'quizzit/register.html', {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
+    return render(request, 'quizzit/register.html', {'user_form': user_form , 'profile_form': profile_form, 'registered': registered, 'categories': category_list,})
 
 def user_login(request):
     invalid_login = False
@@ -107,14 +107,14 @@ def user_login(request):
         else:
             print(f"Invalid login details: {username}, {password}")
             invalid_login = True
-            return render(request, 'quizzit/login.html', {'invalid_login': invalid_login })
+            return render(request, 'quizzit/login.html', {'invalid_login': invalid_login , 'categories': category_list,})
     else:
-        return render(request, 'quizzit/login.html', {'invalid_login': invalid_login })
+        return render(request, 'quizzit/login.html', {'invalid_login': invalid_login , 'categories': category_list,})
 
 @login_required
 def user_logout(request):
     logout(request)
-    return redirect(reverse('rango:index'))
+    return redirect(reverse('rango:index'),)
 
 def leaderboards(request):
     context_dict = {'categories': category_list,}
