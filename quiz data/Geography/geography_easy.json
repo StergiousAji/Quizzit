@@ -1,0 +1,71 @@
+{
+    "name": "Easy Geography",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "What colour is the spot in the middle of the Japanese flag?",
+            "choiceA": "A: Orange",
+            "choiceB": "B: Aquamarine",
+            "choiceC": "C: Red",
+            "choiceD": "D: Green",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "Is Australia in the northern or the southern hemisphere?",
+            "choiceA": "A: Southern Hemisphere",
+            "choiceB": "B: Northern Hemisphere",
+            "choiceC": "C: Eastern Hemisphere",
+            "choiceD": "D: Western Hemisphere",
+            "answer": "A"
+        },
+        {
+            "index": 3,
+            "text": "What does each star on the flag of the United States stand for?",
+            "choiceA": "A: A city",
+            "choiceB": "B: A president",
+            "choiceC": "C: A McDonald's Franchise",
+            "choiceD": "D: A state",
+            "answer": "D"
+        },
+        {
+            "index": 4,
+            "text": "In which country would you be if you were visiting the Taj Mahal?",
+            "choiceA": "A: Brazil",
+            "choiceB": "B: Malaysia",
+            "choiceC": "C: India",
+            "choiceD": "D: Canada",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "What is the highest mountain in Britain?",
+            "choiceA": "A: Slieve Donard",
+            "choiceB": "B: Ben Nevis",
+            "choiceC": "C: Snowdon",
+            "choiceD": "D: Mount Teide",
+            "answer": "B"
+        },
+        {
+            "index": 6,
+            "text": "How many US states begin with the letter A?",
+            "choiceA": "A: 6",
+            "choiceB": "B: 1",
+            "choiceC": "C: 3",
+            "choiceD": "D: 4",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "Machu Picchu can be found in which country?",
+            "choiceA": "A: Peru",
+            "choiceB": "B: Japan",
+            "choiceC": "C: Thailand",
+            "choiceD": "D: Cambodia",
+            "answer": "A"
+        }
+    ]
+}

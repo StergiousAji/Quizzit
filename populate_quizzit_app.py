@@ -52,7 +52,7 @@ def populate():
 
     quiz_list = [
         {'name': 'Quiz 1',
-         'difficulty': 'Easy',
+         'difficulty': 'EASY',
          'category': 'History',
          'views': 20,
          'questions': [
@@ -82,7 +82,7 @@ def populate():
          ],},
 
         {'name': 'Quiz 2',
-         'difficulty': 'Medium',
+         'difficulty': 'MEDIUM',
          'category': 'History',
          'views': 10,
          'questions': [
@@ -112,7 +112,7 @@ def populate():
          ],},
 
         {'name': 'Quiz 3',
-         'difficulty': 'Hard',
+         'difficulty': 'HARD',
          'category': 'Geography',
          'views': 20,
          'questions': [
@@ -141,15 +141,21 @@ def populate():
               'answer': 'A',},
          ],},
     ]
+    quiz_list.extend(read_json_files(r'quiz data/'))
 
-    for i,quiz in enumerate(quiz_list):
+    for quiz in quiz_list:
         cate_obj = Category.objects.get(name=quiz['category'])
-        q = add_quiz(i+1, quiz['name'], quiz['difficulty'], cate_obj, quiz['views']) 
+        q = add_quiz(quiz['name'], quiz['difficulty'], cate_obj, quiz['views']) 
 
         print(f'- added Quiz: {q}')
 
+        for question in quiz['questions']:
+            que = add_question(question['index'], question['text'], question['choiceA'], question['choiceB'], 
+                               question['choiceC'], question['choiceD'], question['answer'], q)
 
-    
+            print(f'- added Question: {que} to {q}')
+
+
     # record_list = [
     #     {'user': 'Alice',
     #      'quiz': 1,
@@ -190,19 +196,22 @@ def add_cate(name):
 
 
 
-def add_quiz(id, name, difficulty, category, views):
-    quiz = Quiz.objects.get_or_create(id=id, difficulty = difficulty, category=category)[0]
-    quiz.name = name
+def add_quiz(name, difficulty, category, views=0):
+    quiz = Quiz.objects.get_or_create(name=name, difficulty=difficulty.upper(), category=category)[0]
     quiz.views = views
+    
     quiz.save()
     return quiz
 
 
 
-def add_question(id, question_text, answer, quiz):
-    question = Question.objects.get_or_create(id=id, quiz=quiz)[0]
+def add_question(index, question_text, choiceA, choiceB, choiceC, choiceD, answer, quiz):
+    question = Question.objects.get_or_create(index=index, quiz=quiz, answer=answer.upper())[0]
     question.question_text = question_text
-    question.answer = answer
+    question.choiceA = choiceA
+    question.choiceB = choiceB
+    question.choiceC = choiceC
+    question.choiceD = choiceD
 
     question.save()
     return question
@@ -218,57 +227,109 @@ def add_record(user, quiz, score=0):
 
 
 
+def read_json_files(dir_path):
+    import json
+    import os
+
+    quiz_list = []
+    for file in os.listdir(dir_path):
+        with open(os.path.join(dir_path, file), 'r') as quiz:
+            quiz_list.append(json.load(quiz))
+
+    return quiz_list
+
+
+
+def create_json_template(file_path):
+    import json
+
+    quiz = '''{ 
+    "name": "name", 
+    "difficulty": "EASY", 
+    "category": "History", 
+    "views": 0,
+    "questions": [
+        {"index": 1, 
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"}, 
+
+        {"index": 2,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"}, 
+
+        {"index": 3,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"},
+
+        {"index": 4,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"},
+
+        {"index": 5,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"},
+
+        {"index": 6,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"},
+
+        {"index": 7,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"}
+    ]
+    }'''
+    
+    with open(file_path, 'w') as f:
+        json.dump(json.loads(quiz), f, indent = 4) 
+        print(f'Created {file_path}')
+
+
+
+############################## remember to delete ####################################
 def test():
-    # quiz_obj = Quiz.objects.get(name='Quiz 1')
-    # add_question('what is it?','A',quiz_obj)
+    # cate_obj = Category.objects.get(name='History')
 
-    # for que in Question.objects.all():
-    #     print(f'-- added Que: {que}')
-    #     print(f'-- {que.quiz}')
+    print('--', Category.objects.get(name='History').quiz_set.all())
+    print('--', Quiz.objects.filter(category__name='History', difficulty='EASY'))
 
-    # print(f"-- {Quiz.objects.filter(category__name='History')}")
-    # print(f"-- {Quiz.objects.filter(category__name='History').count()}")
+    print('--', Quiz.objects.all())
+    print('--')
+    quiz_obj = Quiz.objects.get(quizID='HIST-M-01')
+    print('-- {}, {}, {}'.format(quiz_obj, type(quiz_obj), quiz_obj.id))
+    print('-- {}, {}, {}'.format(quiz_obj.name, quiz_obj.difficulty, quiz_obj.category))
+    print('--', quiz_obj.views)
+    print('--', quiz_obj.question_set.all())
+    print('--', Question.objects.all())
 
-    # category = Category.objects.get(name='History')
-    # count = Quiz.objects.filter(category__name=category.name).count()
-    # q_ID = '{}-{}-{}'.format(category.name[:4].upper(), 'HARD'[0], f'{count+1}'.zfill(2))
-
-    # print(f'-- {q_ID}')
-    quiz_list = [
-        {'name': 'Quiz 3',
-         'difficulty': 'HARD',
-         'category': 'Geography',
-         'question': [
-             {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
- 
-             {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
- 
-              {'text': 'q1',
-              'choiceA': 'A: something',
-              'choiceB': 'B: something',
-              'choiceC': 'C: something',
-              'choiceD': 'D: something',
-              'answer': 'A',},
-         ],},
-    ] 
-
-    i = 0
-    cate_obj = Category.objects.get(name=quiz['category'])
-
-    q = add_quiz(i, quiz['name'], quiz['difficulty'], cate_obj) 
-
-    print(f'-- added Quiz: {q}')
-    print(f'-- {q.quizID}')
+########################################################################################
 
 
 
@@ -277,6 +338,11 @@ if __name__ == '__main__':
     print('Starting quizzit_app population script...')
     populate()
     # test()
+    # create_json_template(r'quiz data/maths hard quiz 1.json')
+
+
+
+
 
 
     

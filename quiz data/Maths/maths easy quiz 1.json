@@ -1,0 +1,71 @@
+{
+    "name": "Interesting Maths",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Solve 200 – 96 ÷ 4 + 128 * 3.",
+            "choiceA": "A: 92",
+            "choiceB": "B: 560",
+            "choiceC": "C: 785",
+            "choiceD": "D: 1632",
+            "answer": "B"
+        },
+        {
+            "index": 2,
+            "text": "One of the following numbers is prime. Which is it?",
+            "choiceA": "A: 2017-2",
+            "choiceB": "B: 2017-1",
+            "choiceC": "C: 2017",
+            "choiceD": "D: 2017+1",
+            "answer": "C"
+        },
+        {
+            "index": 3,
+            "text": "What is the total of the exterior angles of an hexagon?",
+            "choiceA": "A: 180°",
+            "choiceB": "B: 360°",
+            "choiceC": "C: 540°",
+            "choiceD": "D: 720°",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "What is the value of (2019 − (2000 − (10 − 9))) − (2000 − (10 − (9 − 2019)))?",
+            "choiceA": "A: 40",
+            "choiceB": "B: -400",
+            "choiceC": "C: -4002",
+            "choiceD": "D: 4040",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "What is the remainder when 1234 × 5678 is divided by 5?",
+            "choiceA": "A: 0",
+            "choiceB": "B: 1",
+            "choiceC": "C: 2",
+            "choiceD": "D: 3",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "2021 is the product of two primes. What is the sum of these two primes?",
+            "choiceA": "A: 60",
+            "choiceB": "B: 70",
+            "choiceC": "C: 80",
+            "choiceD": "D: 90",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "One light-year is nearly 6 × 10^12 miles. A galaxy is 13.4 thousand million light-years away. Roughly how many miles is that?",
+            "choiceA": "A: 8 × 10^22",
+            "choiceB": "B: 8 × 10^23",
+            "choiceC": "C: 8 × 10^24",
+            "choiceD": "D: 8 × 10^25",
+            "answer": "A"
+        }
+    ]
+}

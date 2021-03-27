@@ -1,0 +1,71 @@
+{
+    "name": "Dr. Geologist",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Which bridge, one of the oldest roadway bridges in the United States, was completed in 1883 and spans the East River?",
+            "choiceA": "A: George Washington Bridge",
+            "choiceB": "B: Manhattan Bridge",
+            "choiceC": "C: Brooklyn Bridge",
+            "choiceD": "D: Whitestone Bridge",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "In which Scandinavian country would you find fjords?",
+            "choiceA": "A: Norway",
+            "choiceB": "B: Sweden",
+            "choiceC": "C: Finland",
+            "choiceD": "D: Denmark",
+            "answer": "A"
+        },
+        {
+            "index": 3,
+            "text": "Which luxury liner made her final voyage to Long Beach, California, when she was made into a civic centre?",
+            "choiceA": "A: Riviera",
+            "choiceB": "B: Regent Seven Seas Explorer",
+            "choiceC": "C: Crystal Serenity",
+            "choiceD": "D: The Queen Mary",
+            "answer": "D"
+        },
+        {
+            "index": 4,
+            "text": " Into which sea does the river Volga flow?",
+            "choiceA": "A: Yellow Sea",
+            "choiceB": "B: Sea of Okhotsk",
+            "choiceC": "C: The Caspian",
+            "choiceD": "D: Baltic Sea",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "Which city would you visit to see Gaudi's fantastical architecture?",
+            "choiceA": "A: Argentina",
+            "choiceB": "B: Barcelona",
+            "choiceC": "C: Beijing",
+            "choiceD": "D: Adelaide",
+            "answer": "B"
+        },
+        {
+            "index": 6,
+            "text": "PEK is the code for which international airport?",
+            "choiceA": "A: Peru",
+            "choiceB": "B: Madagascar",
+            "choiceC": "C: Beijing",
+            "choiceD": "D: Pakistan",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "Which four presidents are engraved on Mount Rushmore?",
+            "choiceA": "A: Lincoln, Jefferson, Trump and Nixon",
+            "choiceB": "B: Roosevelt, Lincoln, Kennedy and Washington",
+            "choiceC": "C: Washington, Roosevelt, Adams and Lincoln",
+            "choiceD": "D: Roosevelt, Washington, Lincoln and Jefferson",
+            "answer": "D"
+        }
+    ]
+}

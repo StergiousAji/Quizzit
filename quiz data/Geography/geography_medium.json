@@ -1,0 +1,71 @@
+{
+    "name": "Mr. Geologist",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "On an O.S Map with a scale of 1:25000, how many inches represent one mile?",
+            "choiceA": "A: 2½ inches",
+            "choiceB": "B: 25 inches",
+            "choiceC": "C: 1¾ inches",
+            "choiceD": "D: 7 inches",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "Which 'D' is an northern England town on the banks of the River Skerne?",
+            "choiceA": "A: Dundee",
+            "choiceB": "B: Derby",
+            "choiceC": "C: Dover",
+            "choiceD": "D: Darlington",
+            "answer": "D"
+        },
+        {
+            "index": 3,
+            "text": "In which continent is the world’s longest river?",
+            "choiceA": "A: Asia",
+            "choiceB": "B: North America",
+            "choiceC": "C: Europe",
+            "choiceD": "D: Africa",
+            "answer": "D"
+        },
+        {
+            "index": 4,
+            "text": "The M1 motorway is how many miles long?",
+            "choiceA": "A: 2316 miles",
+            "choiceB": "B: 1002 miles",
+            "choiceC": "C: 564 miles",
+            "choiceD": "D: 193 miles",
+            "answer": "D"
+        },
+        {
+            "index": 5,
+            "text": "What is the unit of currency of Poland?",
+            "choiceA": "A: Rupees",
+            "choiceB": "B: Zloty",
+            "choiceC": "C: Polish Koruna",
+            "choiceD": "D: Euro",
+            "answer": "B"
+        },
+        {
+            "index": 6,
+            "text": "The Sahara Desert extends into how many countries?",
+            "choiceA": "A: 10",
+            "choiceB": "B: 1",
+            "choiceC": "C: 13",
+            "choiceD": "D: 6",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "By what name is the former country of South West Africa now known?",
+            "choiceA": "A: Uganda",
+            "choiceB": "B: Kenya",
+            "choiceC": "C: South Africa",
+            "choiceD": "D: Namibia",
+            "answer": "D"
+        }
+    ]
+}

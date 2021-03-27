@@ -1,0 +1,71 @@
+{
+    "name": "Maths Marvel",
+    "difficulty": "MEDIUM",
+    "category": "Mathematics",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "The five integers 2, 5, 6, 9, 14 are arranged into a different order. In the new arrangement, the sum of the first three integers is equal to the sum of the last three integers. What is the middle number in the new arrangement?",
+            "choiceA": "A: 5",
+            "choiceB": "B: 6",
+            "choiceC": "C: 9",
+            "choiceD": "D: 14",
+            "answer": "D"
+        },
+        {
+            "index": 2,
+            "text": "What is the volume-to-surface area ratio of a sphere whose radius is one unit?",
+            "choiceA": "A: 1/π",
+            "choiceB": "B: 1/3",
+            "choiceC": "C: 1",
+            "choiceD": "D: π",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "How many positive factors does 420 have?",
+            "choiceA": "A: 5",
+            "choiceB": "B: 14",
+            "choiceC": "C: 24",
+            "choiceD": "D: 30",
+            "answer": "C"
+        },
+        {
+            "index": 4,
+            "text": "For how many positive integer values of n is n^2 + 2n prime?",
+            "choiceA": "A: 0",
+            "choiceB": "B: 1",
+            "choiceC": "C: 2",
+            "choiceD": "D: more than 2",
+            "answer": "B"
+        },
+        {
+            "index": 5,
+            "text": "What is the area of a triangle with sides 4, 13, and 15?",
+            "choiceA": "A: 24",
+            "choiceB": "B: 26",
+            "choiceC": "C: 28",
+            "choiceD": "D: 30",
+            "answer": "A"
+        },
+        {
+            "index": 6,
+            "text": "What is the largest prime factor of 106^2 − 15^2?",
+            "choiceA": "A: 3",
+            "choiceB": "B: 7",
+            "choiceC": "C: 11",
+            "choiceD": "D: 13",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "The positive integer k satisfies the equation √2 + √8 + √18 = √k. What is the value of k?",
+            "choiceA": "A: 28",
+            "choiceB": "B: 36",
+            "choiceC": "C: 72",
+            "choiceD": "D: 128",
+            "answer": "C"
+        }
+    ]
+}

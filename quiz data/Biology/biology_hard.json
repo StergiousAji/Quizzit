@@ -1,0 +1,71 @@
+{
+    "name": "Biology: For Nerds",
+    "difficulty": "HARD",
+    "category": "Biology",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "How many species are estimated to live on Earth?",
+            "choiceA": "A: 14 million",
+            "choiceB": "B: 2 billion",
+            "choiceC": "C: 8.7 million",
+            "choiceD": "D: 112 million",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "Heterochromia results in which change in physical appearance?",
+            "choiceA": "A: Different Coloured Hair",
+            "choiceB": "B: Different Coloured Skin",
+            "choiceC": "C: Different Coloured Eyes",
+            "choiceD": "D: Larger Lips",
+            "answer": "C"
+        },
+        {
+            "index": 3,
+            "text": "Crohn’s disease is part of which disease group?",
+            "choiceA": "A: Celiac disease",
+            "choiceB": "B: Inflammatory bowel disease",
+            "choiceC": "C: Heart disease",
+            "choiceD": "D: Autoimune disease",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "When was the Human Genome project completed?",
+            "choiceA": "A: 2003",
+            "choiceB": "B: 2020",
+            "choiceC": "C: 1988",
+            "choiceD": "D: 1996",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "What is the largest tree in the world?",
+            "choiceA": "A: The Dragon Tree",
+            "choiceB": "B: Redwood",
+            "choiceC": "C: Sequoia",
+            "choiceD": "D: Bald Cyprus",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "What color is mollusk blood?",
+            "choiceA": "A: Black",
+            "choiceB": "B: Red",
+            "choiceC": "C: Blue",
+            "choiceD": "D: Dark Green",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "Trisomy-21 is popularly known as what?",
+            "choiceA": "A: Tourettes Syndrome",
+            "choiceB": "B: CLOVES Syndrome",
+            "choiceC": "C: The X Chromosome",
+            "choiceD": "D: Down Syndrome",
+            "answer": "D"
+        }
+    ]
+}

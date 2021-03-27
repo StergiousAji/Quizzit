@@ -1,0 +1,71 @@
+{
+    "name": "Biology: This be Easy",
+    "difficulty": "EASY",
+    "category": "Biology",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Botany is the study of what life form?",
+            "choiceA": "A: Plants",
+            "choiceB": "B: Flowers",
+            "choiceC": "C: Humans",
+            "choiceD": "D: Bacteria",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "What is the human body’s largest organ?",
+            "choiceA": "A: Skin",
+            "choiceB": "B: Intestines",
+            "choiceC": "C: Lungs",
+            "choiceD": "D: Liver",
+            "answer": "A"
+        },
+        {
+            "index": 3,
+            "text": "How many teeth do snails have on average?",
+            "choiceA": "A: 168",
+            "choiceB": "B: 14,000",
+            "choiceC": "C: 0",
+            "choiceD": "D: 26",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "Who discovered penicillin?",
+            "choiceA": "A: James Watson",
+            "choiceB": "B: Alexandar Graham Bell",
+            "choiceC": "C: Louis Pasteur",
+            "choiceD": "D: Alexandar Fleming",
+            "answer": "D"
+        },
+        {
+            "index": 5,
+            "text": "In which type of cells would you find cell walls?",
+            "choiceA": "A: Animal cells",
+            "choiceB": "B: Skin cells",
+            "choiceC": "C: Plant cells",
+            "choiceD": "D: All of the above",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "How many bones does an adult human have?",
+            "choiceA": "A: 206",
+            "choiceB": "B: 328",
+            "choiceC": "C: 142",
+            "choiceD": "D: 96",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "The term ‘renal’ refers to which organs?",
+            "choiceA": "A: Lungs",
+            "choiceB": "B: Liver",
+            "choiceC": "C: Kidneys",
+            "choiceD": "D: Large Intestine",
+            "answer": "C"
+        }
+    ]
+}

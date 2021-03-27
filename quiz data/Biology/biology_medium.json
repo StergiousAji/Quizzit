@@ -1,0 +1,71 @@
+{
+    "name": "Biology: Ooh boy this is tough",
+    "difficulty": "MEDIUM",
+    "category": "Biology",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Hansen’s disease is more commonly known by which name?",
+            "choiceA": "A: Alzheimer's",
+            "choiceB": "B: Diabetes",
+            "choiceC": "C: Leprosy",
+            "choiceD": "D: Parkinson's",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "A DNA molecule is described as being what shape?",
+            "choiceA": "A: Double Helix",
+            "choiceB": "B: Triple Helix",
+            "choiceC": "C: Repeating Corkscrew",
+            "choiceD": "D: Double Helicoid",
+            "answer": "A"
+        },
+        {
+            "index": 3,
+            "text": "What year was the first animal cloned?",
+            "choiceA": "A: 2003",
+            "choiceB": "B: 1996",
+            "choiceC": "C: 2015",
+            "choiceD": "D: 1956",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "Which food substance helps move waste through the body?",
+            "choiceA": "A: Fibre",
+            "choiceB": "B: Carbohydrates",
+            "choiceC": "C: Fats",
+            "choiceD": "D: Proteins",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "What part of the human body is the Mandible?",
+            "choiceA": "A: The Sacrum",
+            "choiceB": "B: Lower Jawbone",
+            "choiceC": "C: Fibula",
+            "choiceD": "D: Lower Thighs",
+            "answer": "B"
+        },
+        {
+            "index": 6,
+            "text": "What is the name of the biggest part of the human brain?",
+            "choiceA": "A: The Cerebellum",
+            "choiceB": "B: The Temporal Lobe",
+            "choiceC": "C: The Frontal Lobe",
+            "choiceD": "D: The Cerebrum",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "How many neck vertebrae do giraffes have, compared to a human’s seven?",
+            "choiceA": "A: 29",
+            "choiceB": "B: 18",
+            "choiceC": "C: 7",
+            "choiceD": "D: 1",
+            "answer": "C"
+        }
+    ]
+}

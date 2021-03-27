@@ -1,11 +1,4 @@
-.search-container {
-    text-align: left;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    margin-left: 250px;
-    margin-top: 30px;
-}
+
 div.leaderboards {
     display: flex;
     justify-content: space-between;
@@ -72,4 +65,36 @@ thead tr th {
 tbody { border-top: 2px solid black; }
 tbody td:last-child, thead th:last-child {
     border-right: none !important;
+}
+
+div.leaderboard_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    font-size: 25px;
+
+}
+
+div.leaderboard_buttons a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+div.leaderboard_buttons a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+  
+.next {
+    background-color: #4CAF50;
+    color: white;
 }
