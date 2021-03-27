@@ -17,16 +17,12 @@
     {% if category %}
         <h1>{{ category.name }}</h1>
         <div class="buttons-container">
-            <!-- <button id="btnEasy">Easy</button>
-            <button id="btnMedium">Medium</button>
-            <button id="btnHard">Hard</button>
-            <p id="demo"></p> -->
             {% for q in quiz %}
-                {% if q.difficulty == 'Easy' %}
+                {% if q.difficulty == q.EASY %}
                     <a href="{% url 'quizzit:quiz' category.slug q.slug %}"><button id="btnEasy">Easy</button></a>
-                {% elif q.difficulty == 'Medium' %}
+                {% elif q.difficulty == q.MED %}
                     <a href="{% url 'quizzit:quiz' category.slug q.slug %}"><button id="btnMedium">Medium</button></a>
-                {% elif q.difficulty == 'Hard' %}
+                {% elif q.difficulty == q.HARD %}
                     <a href="{% url 'quizzit:quiz' category.slug q.slug %}"><button id="btnHard">Hard</button></a>
                 {% endif %}
             {% endfor %}
