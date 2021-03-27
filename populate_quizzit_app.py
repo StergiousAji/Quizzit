@@ -313,9 +313,14 @@ def create_json_template(file_path):
 
 
 
+<<<<<<< HEAD
 ############################## remember to delete ####################################
 def test():
     # cate_obj = Category.objects.get(name='History')
+=======
+    # print(f'-- {q_ID}')
+    
+>>>>>>> f33f491736e23118c8fe1108f51f2ab6105a59b7
 
     print('--', Category.objects.get(name='History').quiz_set.all())
     print('--', Quiz.objects.filter(category__name='History', difficulty='EASY'))

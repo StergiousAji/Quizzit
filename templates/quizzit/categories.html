@@ -13,9 +13,9 @@
     <h1><u>Categories</u></h1>
     <div class="categories-container">
         {% if categories %}
-            {% for c in categories %}
-                <button class="buttons"><a href="{% url 'quizzit:show_category' c.slug %}">{{ c.name }}</a></button>
-            {% endfor %}
+        {% for c in categories %}
+        <a href="{% url 'quizzit:show_category' c.slug %}"><button class="buttons">{{ c.name }}</button></a>
+{% endfor %}
         {% else %}
             <h1>There are no categories to show.</h1>
         {% endif %}
