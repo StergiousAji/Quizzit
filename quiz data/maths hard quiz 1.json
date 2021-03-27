@@ -1,0 +1,71 @@
+{
+    "name": "Millennium Prize Maths Problems",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Bethany has 11 pound coins and some 20p coins and some 50p coins in her purse. The mean value of the coins is 52 pence. Which could not be the number of coins in the purse?",
+            "choiceA": "A: 30",
+            "choiceB": "B: 40",
+            "choiceC": "C: 50",
+            "choiceD": "D: 65",
+            "answer": "B"
+        },
+        {
+            "index": 2,
+            "text": "The number 16! ÷ 2^k is an odd integer. What is the value of k?",
+            "choiceA": "A: 9",
+            "choiceB": "B: 11",
+            "choiceC": "C: 13",
+            "choiceD": "D: 15",
+            "answer": "D"
+        },
+        {
+            "index": 3,
+            "text": "When written out in full, the number (10^2020 + 2020)^2 has 4041 digits. What is the sum of the digits of this 4041-digit number?",
+            "choiceA": "A: 25",
+            "choiceB": "B: 30",
+            "choiceC": "C: 2048",
+            "choiceD": "D: 4041",
+            "answer": "A"
+        },
+        {
+            "index": 4,
+            "text": "For how many integer values of k is √(200 − √(k)) also an integer?",
+            "choiceA": "A: 11",
+            "choiceB": "B: 13",
+            "choiceC": "C: 15",
+            "choiceD": "D: 17",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "A function f satisfies the equation (n−2019) * f(n) − f(2019−n) = 2019 for every integer n. What is the value of f (2019)?",
+            "choiceA": "A: 0",
+            "choiceB": "B: 1",
+            "choiceC": "C: 2019^2",
+            "choiceD": "D: 2018*2019",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "A function f satisfies y^3 * f(x) = x^3 * f(y) and f(3) not eual to 0. What is the value of (f(20) − f(2)) / f(3)?",
+            "choiceA": "A: 6",
+            "choiceB": "B: 20",
+            "choiceC": "C: 216",
+            "choiceD": "D: 296",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "The lines y = x and y = mx − 4 intersect at the point P. What is the sum of the positive integer values of m for which the coordinates of P are also positive integers?",
+            "choiceA": "A: 5",
+            "choiceB": "B: 7",
+            "choiceC": "C: 10",
+            "choiceD": "D: 12",
+            "answer": "C"
+        }
+    ]
+}

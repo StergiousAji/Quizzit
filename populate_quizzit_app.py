@@ -52,7 +52,7 @@ def populate():
 
     quiz_list = [
         {'name': 'Quiz 1',
-         'difficulty': 'Easy',
+         'difficulty': 'EASY',
          'category': 'History',
          'views': 20,
          'questions': [
@@ -82,7 +82,7 @@ def populate():
          ],},
 
         {'name': 'Quiz 2',
-         'difficulty': 'Medium',
+         'difficulty': 'MEDIUM',
          'category': 'History',
          'views': 10,
          'questions': [
@@ -112,7 +112,7 @@ def populate():
          ],},
 
         {'name': 'Quiz 3',
-         'difficulty': 'Hard',
+         'difficulty': 'HARD',
          'category': 'Geography',
          'views': 20,
          'questions': [
@@ -141,23 +141,21 @@ def populate():
               'answer': 'A',},
          ],},
     ]
+    quiz_list.extend(read_json_files(r'quiz data/'))
 
-    # this is the global question id
-    question_id = 1
-    for i,quiz in enumerate(quiz_list):
+    for quiz in quiz_list:
         cate_obj = Category.objects.get(name=quiz['category'])
-        q = add_quiz(i+1, quiz['name'], quiz['difficulty'], cate_obj, quiz['views']) 
+        q = add_quiz(quiz['name'], quiz['difficulty'], cate_obj, quiz['views']) 
 
         print(f'- added Quiz: {q}')
 
         for question in quiz['questions']:
-            que = add_question(question_id, question['index'], question['text'],
-                               question['choiceA'], question['choiceB'], question['choiceC'], 
-                               question['choiceD'], question['answer'], q)
-            question_id += 1
+            que = add_question(question['index'], question['text'], question['choiceA'], question['choiceB'], 
+                               question['choiceC'], question['choiceD'], question['answer'], q)
+
             print(f'- added Question: {que} to {q}')
 
-    
+
     # record_list = [
     #     {'user': 'Alice',
     #      'quiz': 1,
@@ -198,24 +196,22 @@ def add_cate(name):
 
 
 
-def add_quiz(id, name, difficulty, category, views):
-    quiz = Quiz.objects.get_or_create(id=id, difficulty = difficulty, category=category)[0]
-    quiz.name = name
+def add_quiz(name, difficulty, category, views=0):
+    quiz = Quiz.objects.get_or_create(name=name, difficulty=difficulty.upper(), category=category)[0]
     quiz.views = views
+    
     quiz.save()
     return quiz
 
 
 
-def add_question(id, index, question_text, choiceA, choiceB, choiceC, choiceD, answer, quiz):
-    question = Question.objects.get_or_create(id=id, quiz=quiz)[0]
-    question.index = index
+def add_question(index, question_text, choiceA, choiceB, choiceC, choiceD, answer, quiz):
+    question = Question.objects.get_or_create(index=index, quiz=quiz, answer=answer.upper())[0]
     question.question_text = question_text
     question.choiceA = choiceA
     question.choiceB = choiceB
     question.choiceC = choiceC
     question.choiceD = choiceD
-    question.answer = answer
 
     question.save()
     return question
@@ -231,17 +227,109 @@ def add_record(user, quiz, score=0):
 
 
 
-def test():
-    quiz_obj = Quiz.objects.get(id=1)
-    print('--', quiz_obj)
+def read_json_files(dir_path):
+    import json
+    import os
 
-    # cate_obj = Category.objects.get(name='History').quiz_set.all()
+    quiz_list = []
+    for file in os.listdir(dir_path):
+        with open(os.path.join(dir_path, file), 'r') as quiz:
+            quiz_list.append(json.load(quiz))
+
+    return quiz_list
+
+
+
+def create_json_template(file_path):
+    import json
+
+    quiz = '''{ 
+    "name": "name", 
+    "difficulty": "EASY", 
+    "category": "History", 
+    "views": 0,
+    "questions": [
+        {"index": 1, 
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"}, 
+
+        {"index": 2,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"}, 
+
+        {"index": 3,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"},
+
+        {"index": 4,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"},
+
+        {"index": 5,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"},
+
+        {"index": 6,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"},
+
+        {"index": 7,
+         "text": "text",
+         "choiceA": "sth",
+         "choiceB": "sth",
+         "choiceC": "sth",
+         "choiceD": "sth",
+         "answer": "A"}
+    ]
+    }'''
+    
+    with open(file_path, 'w') as f:
+        json.dump(json.loads(quiz), f, indent = 4) 
+        print(f'Created {file_path}')
+
+
+
+############################## remember to delete ####################################
+def test():
+    # cate_obj = Category.objects.get(name='History')
 
     print('--', Category.objects.get(name='History').quiz_set.all())
-    print('--', Quiz.objects.filter(category__name='History', difficulty='Easy'))
+    print('--', Quiz.objects.filter(category__name='History', difficulty='EASY'))
 
-    print('--', Quiz.objects.get(id=1).question_set.all())
-    print('--', Quiz.objects.get(id=2).question_set.all())
+    print('--', Quiz.objects.all())
+    print('--')
+    quiz_obj = Quiz.objects.get(quizID='HIST-M-01')
+    print('-- {}, {}, {}'.format(quiz_obj, type(quiz_obj), quiz_obj.id))
+    print('-- {}, {}, {}'.format(quiz_obj.name, quiz_obj.difficulty, quiz_obj.category))
+    print('--', quiz_obj.views)
+    print('--', quiz_obj.question_set.all())
+    print('--', Question.objects.all())
+
+########################################################################################
 
 
 
@@ -250,6 +338,10 @@ if __name__ == '__main__':
     print('Starting quizzit_app population script...')
     populate()
     # test()
+    # create_json_template(r'quiz data/maths hard quiz 1.json')
+
+
+
 
 
 
