@@ -1,0 +1,71 @@
+{
+    "name": "TV Shows are my Life",
+    "difficulty": "HARD",
+    "category": "TV Shows",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Which character appears in more episodes than any other in the show 'Game of Thrones'?",
+            "choiceA": "A: Daenerys Targaryen",
+            "choiceB": "B: Tyrion Lannister",
+            "choiceC": "C: Cersei Lannister",
+            "choiceD": "D: Arya Stark",
+            "answer": "B"
+        },
+        {
+            "index": 2,
+            "text": "What does 'Valar morghulis' mean in High Valyrian",
+            "choiceA": "A: Winter is coming",
+            "choiceB": "B: Unbowed, Unbent, Unbroken",
+            "choiceC": "C: All men must die",
+            "choiceD": "D: What Is Dead May Never Die",
+            "answer": "C"
+        },
+        {
+            "index": 3,
+            "text": "What distracts Walt from absorbing the news of his cancer diagnosis in 'Breaking Bad'?",
+            "choiceA": "A: Walt's second cell phone is buzzing",
+            "choiceB": "B: The doctor has a lazy eye",
+            "choiceC": "C: Walt is stressing about his money",
+            "choiceD": "D: The doctor has mustard on his coat",
+            "answer": "D"
+        },
+        {
+            "index": 4,
+            "text": "Who was originally supposed to die by the end of season one of 'Breaking Bad'?",
+            "choiceA": "A: Hank Schrader",
+            "choiceB": "B: Marie Schrader",
+            "choiceC": "C: Jesse Pinkman",
+            "choiceD": "D: Skylar White",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "What was the original proposed for the character of Mr. Bean?",
+            "choiceA": "A: Mr. White",
+            "choiceB": "B: Mr. Cauliflower",
+            "choiceC": "C: Mr. Bone",
+            "choiceD": "D: Mr. Peabody",
+            "answer": "A"
+        },
+        {
+            "index": 6,
+            "text": "What is the name of the corporation running The Seven in 'The Boys'?",
+            "choiceA": "A: Stillwell Global",
+            "choiceB": "B: Samaritan's Embrace",
+            "choiceC": "C: Vought International",
+            "choiceD": "D: Homeland Security",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "In 'Star Trek' what colour was Mr Spock's blood??",
+            "choiceA": "A: Green",
+            "choiceB": "B: Blue",
+            "choiceC": "C: Orange",
+            "choiceD": "D: Purple",
+            "answer": "A"
+        }
+    ]
+}

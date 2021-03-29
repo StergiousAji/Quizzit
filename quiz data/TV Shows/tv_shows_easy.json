@@ -1,0 +1,71 @@
+{
+    "name": "TV Shows: Easy",
+    "difficulty": "EASY",
+    "category": "TV Shows",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Which supernatural show is set in the fictional town of Hawkins, Indiana?",
+            "choiceA": "A: Teen Wolf",
+            "choiceB": "B: Indiana",
+            "choiceC": "C: Stranger Things",
+            "choiceD": "D: Goosebumps",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "In which show would you see a sonic screwdriver?",
+            "choiceA": "A: Doctor Who",
+            "choiceB": "B: Doctor What",
+            "choiceC": "C: Supernaturals",
+            "choiceD": "D: Sherlock",
+            "answer": "A"
+        },
+        {
+            "index": 3,
+            "text": "By day, Barry Allen is this superhero in the TV show of the same name. Can you name it?",
+            "choiceA": "A: Power Man",
+            "choiceB": "B: The Tick",
+            "choiceC": "C: Europe",
+            "choiceD": "D: The Flash",
+            "answer": "D"
+        },
+        {
+            "index": 4,
+            "text": "Which TV series is set on the fictional continents of Westeros and Essos?",
+            "choiceA": "A: Game of Thrones",
+            "choiceB": "B: The Man in the High Castle",
+            "choiceC": "C: The Handmaid's Tail",
+            "choiceD": "D: Altered Carbon",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "Who played the neurologist Amy Fowler in the hit sitcom 'The Big Bang Theory'?",
+            "choiceA": "A: Kaley Cuoco",
+            "choiceB": "B: Melissa Rauch",
+            "choiceC": "C: Mayim Bialik",
+            "choiceD": "D: Johnny Galecki",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "Who does Matt LeBlanc play in the show 'Friends'?",
+            "choiceA": "A: Ross Geller",
+            "choiceB": "B: Joey Tribbiani",
+            "choiceC": "C: Mike Hannigan",
+            "choiceD": "D: Harvey Osbourne",
+            "answer": "B"
+        },
+        {
+            "index": 7,
+            "text": "Meghan Markle is an actress best known for appearing in which show?",
+            "choiceA": "A: Neighbours",
+            "choiceB": "B: Suits",
+            "choiceC": "C: The Crown",
+            "choiceD": "D: Gossip Girl",
+            "answer": "B"
+        }
+    ]
+}

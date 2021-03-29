@@ -1,0 +1,71 @@
+{
+    "name": "Yes I watch TV Shows",
+    "difficulty": "MEDIUM",
+    "category": "TV Shows",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Who created The Simpsons?",
+            "choiceA": "A: Matt Groening",
+            "choiceB": "B: Marta Kauffman",
+            "choiceC": "C: David Crane",
+            "choiceD": "D: Charlie Brooker",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "In Game of Thrones, what does Arya Stark call her sword?",
+            "choiceA": "A: Needle",
+            "choiceB": "B: Lightbringer",
+            "choiceC": "C: Silencer",
+            "choiceD": "D: Jon Snow",
+            "answer": "A"
+        },
+        {
+            "index": 3,
+            "text": "Name the comedian who plays Mark Corrigan in Peep Show",
+            "choiceA": "A: Robert Webb",
+            "choiceB": "B: Matt King",
+            "choiceC": "C: Lee Mack",
+            "choiceD": "D: David Mitchell",
+            "answer": "D"
+        },
+        {
+            "index": 4,
+            "text": "Breaking Bad sees Walter White and Jessie Pinkman making what drug?",
+            "choiceA": "A: Cocaine",
+            "choiceB": "B: Heroin",
+            "choiceC": "C: Crystal Meth",
+            "choiceD": "D: Ricin",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "What Netflix show stars Emma Mackey, Margot Robbie's 'doppelganger'?",
+            "choiceA": "A: Ozark",
+            "choiceB": "B: Sex Education",
+            "choiceC": "C: The Stranger",
+            "choiceD": "D: You",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "Miley Cyrus rose to fame in what show about a girl having 'the best of both worlds'?",
+            "choiceA": "A: Wizards of Waverly Palace",
+            "choiceB": "B: Sam & Cat",
+            "choiceC": "C: Girl Meets World",
+            "choiceD": "D: Hannah Montana",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "What mental illness does Carrie Mathison suffer from in Homeland?",
+            "choiceA": "A: Bipolar",
+            "choiceB": "B: Obsessive Cumpulsive Disorder",
+            "choiceC": "C: Schizophrenia",
+            "choiceD": "D: Post-traumatic Stress Disorder",
+            "answer": "A"
+        }
+    ]
+}
