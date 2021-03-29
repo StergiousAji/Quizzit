@@ -1,0 +1,71 @@
+{
+    "name": "History: For Adults",
+    "difficulty": "HARD",
+    "category": "History",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Who used the Royston cave according to most popular theories?",
+            "choiceA": "A: The Knights Templar",
+            "choiceB": "B: The Saint Teese",
+            "choiceC": "C: King George",
+            "choiceD": "D: King Henry",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "What century was the town of Watford first created as a settlement?",
+            "choiceA": "A: 11th Century",
+            "choiceB": "B: 14th Century",
+            "choiceC": "C: 12th Century",
+            "choiceD": "D: 8th Century",
+            "answer": "C"
+        },
+        {
+            "index": 3,
+            "text": "In 1990 who created the World Wide Web?",
+            "choiceA": "A: Bob Kahn",
+            "choiceB": "B: Tim Berners-Lee",
+            "choiceC": "C: Vint Verf",
+            "choiceD": "D: Alan Turing",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "Which popular fast food chain restaurant was first opened in 1955?",
+            "choiceA": "A: KFC",
+            "choiceB": "B: Mcdonalds",
+            "choiceC": "C: Papa Johns",
+            "choiceD": "D: Burger King",
+            "answer": "B"
+        },
+        {
+            "index": 5,
+            "text": "What year was the Potters Bar rail crash?",
+            "choiceA": "A: 2004",
+            "choiceB": "B: 1999",
+            "choiceC": "C: 1988",
+            "choiceD": "D: 2002",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "Which modern day Indian city used to be called Madras?",
+            "choiceA": "A: Chennai",
+            "choiceB": "B: Pune",
+            "choiceC": "C: Kolkata",
+            "choiceD": "D: Mumbai",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "Which planet was discovered in 1846",
+            "choiceA": "A: Kepler",
+            "choiceB": "B: Pluto",
+            "choiceC": "C: Uranus",
+            "choiceD": "D: Neptune",
+            "answer": "D"
+        }
+    ]
+}

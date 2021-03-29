@@ -1,0 +1,71 @@
+{
+    "name": "History: For Kids",
+    "difficulty": "EASY",
+    "category": "History",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Who was Henry VIII's fifth wife?",
+            "choiceA": "A: Joan of Navarre",
+            "choiceB": "B: Mary de Bohun",
+            "choiceC": "C: Catherine Howard",
+            "choiceD": "D: Ane of Cleves",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "What year did WW2 start?",
+            "choiceA": "A: 1939",
+            "choiceB": "B: 1940",
+            "choiceC": "C: 1945",
+            "choiceD": "D: 1926",
+            "answer": "A"
+        },
+        {
+            "index": 3,
+            "text": "What was Nelson Mandela's politcal party called?",
+            "choiceA": "A: Freedom Front Plus",
+            "choiceB": "B: African National Congress",
+            "choiceC": "C: Economic Freedom Fighters",
+            "choiceD": "D: United Democratic Party",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "What famous novel was banned in 1928?",
+            "choiceA": "A: Orlando",
+            "choiceB": "B: Lady Chatterley's Lover",
+            "choiceC": "C: The call of Cthulhu",
+            "choiceD": "D: The twelve Chairs",
+            "answer": "B"
+        },
+        {
+            "index": 5,
+            "text": "What came after the Bronze Age",
+            "choiceA": "A: The Iron Age",
+            "choiceB": "B: The Silver Age",
+            "choiceC": "C: The Gold Age",
+            "choiceD": "D: The Stone Age",
+            "answer": "A"
+        },
+        {
+            "index": 6,
+            "text": "What were the surfaces of Egypt's ancient pyramids covered with",
+            "choiceA": "A: White limestone",
+            "choiceB": "B: Mud",
+            "choiceC": "C: Sandstone",
+            "choiceD": "D: Marble",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "Which life-changing technology was launched in 1903",
+            "choiceA": "A: Camera",
+            "choiceB": "B: Car",
+            "choiceC": "C: Telephone",
+            "choiceD": "D: Areoplanes",
+            "answer": "D"
+        }
+    ]
+}

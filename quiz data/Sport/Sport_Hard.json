@@ -1,0 +1,71 @@
+{
+    "name": "Sport: For Adults",
+    "difficulty": "HARD",
+    "category": "Sport",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "In which sport do competitors refer to 'catching a crab'?",
+            "choiceA": "A: Rowing",
+            "choiceB": "B: Kayaking",
+            "choiceC": "C: Fishing",
+            "choiceD": "D: Swimming",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "How many MMA fights has UFC star Conor Mcgregor lost during his career?",
+            "choiceA": "A: 3",
+            "choiceB": "B: 4",
+            "choiceC": "C: 5",
+            "choiceD": "D: 6",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "Jurgen Klopp began his managerial career at which German Club?",
+            "choiceA": "A: Mainz 05",
+            "choiceB": "B: VfB Stuttgart",
+            "choiceC": "C: Borussia Dortmund",
+            "choiceD": "D: Bayer Leverkusen",
+            "answer": "A"
+        },
+        {
+            "index": 4,
+            "text": "Which of these is not a real sport?",
+            "choiceA": "A: Footgolf",
+            "choiceB": "B: Chess",
+            "choiceC": "C: Gaming",
+            "choiceD": "D: Hand Rouders",
+            "answer": "D"
+        },
+        {
+            "index": 5,
+            "text": "What does WWE stand for?",
+            "choiceA": "A: Wrestling Wide Entertainment",
+            "choiceB": "B: Wrestling World Entertainment",
+            "choiceC": "C: World Wrestling Entertainment",
+            "choiceD": "D: World Wide Entertainment",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "How many balls are in total are there on the table at the start of a game of snooker?",
+            "choiceA": "A: 22",
+            "choiceB": "B: 12",
+            "choiceC": "C: 17",
+            "choiceD": "D: 25",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "Which footballer has scored the most goals in World Cup history?",
+            "choiceA": "A: Cristiano Ronaldo",
+            "choiceB": "B: Miroslav Klose",
+            "choiceC": "C: Lionel Messi",
+            "choiceD": "D: Pele",
+            "answer": "B"
+        }
+    ]
+}
