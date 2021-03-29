@@ -70,7 +70,7 @@ class Quiz(models.Model):
     def create_quizID(self):
         # all the id of quizzes with the same category name and difficulty level
         id_list = [q.id for q in Quiz.objects.filter(category__name=self.category.name, difficulty=self.difficulty)]
-#        # if the quiz does not exist yet
+        # if the quiz does not exist yet
         if self.id not in id_list:
             count = len(id_list)
             q_ID = '{}-{}-{}'.format(

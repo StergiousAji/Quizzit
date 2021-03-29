@@ -1,0 +1,71 @@
+{
+    "name": "Quiz of Day Hard",
+    "difficulty": "HARD",
+    "category": "Quiz of Day",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Which English monarch married Eleanor of Aquitaine?",
+            "choiceA": "A: Henry II",
+            "choiceB": "B: Henry IV",
+            "choiceC": "C: Henry VI",
+            "choiceD": "D: Henry VIII",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "Who was the last wife of Henry VIII?",
+            "choiceA": "A: Anne of Cleves",
+            "choiceB": "B: Catherine of Aragon",
+            "choiceC": "C: Catherine Howard",
+            "choiceD": "D: Catherine Parr",
+            "answer": "D"
+        },
+        {
+            "index": 3,
+            "text": "Which country did Britain fight in the War of Jenkins’ Ear?",
+            "choiceA": "A: France",
+            "choiceB": "B: Ireland",
+            "choiceC": "C: Spain",
+            "choiceD": "D: Wales",
+            "answer": "C"
+        },
+        {
+            "index": 4,
+            "text": "Which King George did Prince Regent become?",
+            "choiceA": "A: George IV",
+            "choiceB": "B: George III",
+            "choiceC": "C: George II",
+            "choiceD": "D: George I",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "At the Siege of Mafeking, who led the British forces?",
+            "choiceA": "A: Robert Baden-Powell",
+            "choiceB": "B: Colonel B. T. Mahon",
+            "choiceC": "C: Fieldmarshal Bernard Montgomery",
+            "choiceD": "D: Louis Mountbatten",
+            "answer": "A"
+        },
+        {
+            "index": 6,
+            "text": "The House of Lancaster kings were all called what?",
+            "choiceA": "A: Charles",
+            "choiceB": "B: Edward",
+            "choiceC": "C: George",
+            "choiceD": "D: Henry",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "Apart from Mad George, which kinder nickname did George III have?",
+            "choiceA": "A: Big George",
+            "choiceB": "B: Farmer Giles",
+            "choiceC": "C: Farmer George",
+            "choiceD": "D: Happy George",
+            "answer": "C"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "name": "Movie hard",
+    "difficulty": "HARD",
+    "category": "Movies",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "In the 2004 film '50 First Dates', who plays the female lead opposite Adam Sandler",
+            "choiceA": "A: Drew Barrymore",
+            "choiceB": "B: Sandra Bullock",
+            "choiceC": "C: Emily Watson",
+            "choiceD": "D: Reese Witherspoon",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "In which country was actor Russell Crowe born?",
+            "choiceA": "A: USA",
+            "choiceB": "B: Australia",
+            "choiceC": "C: New Zealand",
+            "choiceD": "D: Canada",
+            "answer": "C"
+        },
+        {
+            "index": 3,
+            "text": "Who directed the 1984 film 'Paris, Texas'?",
+            "choiceA": "A: Wim Wenders",
+            "choiceB": "B: Werner Herzog",
+            "choiceC": "C: Rainer Fasssbinder",
+            "choiceD": "D: Wolfgang Petersen",
+            "answer": "A"
+        },
+        {
+            "index": 4,
+            "text": "What country is Sacha Baron Cohen's character 'Borat' supposed to be from?",
+            "choiceA": "A: Afghanistan",
+            "choiceB": "B: Azerbaijan",
+            "choiceC": "C: Kazakhstan",
+            "choiceD": "D: Uzbekistan",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "Which American actor is associated with the line 'Go ahead, make my day', which he delivered in 1983 film?",
+            "choiceA": "A: Arnold Schwarzenegger",
+            "choiceB": "B: Bruce Willis",
+            "choiceC": "C: Chuck Norris",
+            "choiceD": "D: Clint Eastwood",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "What US city is the post-apocalyptic setting for the 2014 science-fiction film 'Divergent'?",
+            "choiceA": "A: Atlanta",
+            "choiceB": "B: Baltimore",
+            "choiceC": "C: Chicago",
+            "choiceD": "D: Dundee",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "How old was Jessica Tandy when she won the Academy Award for Best Actress for the 1989 film 'Driving Miss Daisy'?",
+            "choiceA": "A: 50 years old",
+            "choiceB": "B: 60 years old",
+            "choiceC": "C: 70 years old",
+            "choiceD": "D: 80 years old",
+            "answer": "D"
+        }
+    ]
+}

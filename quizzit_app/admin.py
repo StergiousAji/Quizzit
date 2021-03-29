@@ -6,6 +6,7 @@ class RegisterUserAdmin(admin.ModelAdmin):
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
+    prepopulated_fields = {'slug':('name',)}
 
 class QuizAdmin(admin.ModelAdmin):
     list_display = ('quizID', 'name', 'difficulty', 'category', 'views')

@@ -1,0 +1,71 @@
+{
+    "name": "Quiz of Day Medium",
+    "difficulty": "MEDIUM",
+    "category": "Quiz of Day",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "What colour is gin?",
+            "choiceA": "A: Colourless",
+            "choiceB": "B: Blue",
+            "choiceC": "C: Green",
+            "choiceD": "D: Yellow",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "Which fruit is covered with toffee at a fairground?",
+            "choiceA": "A: Banana",
+            "choiceB": "B: Apple",
+            "choiceC": "C: Carrot",
+            "choiceD": "D: Pear",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "Which nuts are used to make marzipan?",
+            "choiceA": "A: Almonds",
+            "choiceB": "B: Chestnuts",
+            "choiceC": "C: Hazelnuts",
+            "choiceD": "D: Walnuts",
+            "answer": "A"
+        },
+        {
+            "index": 4,
+            "text": "What meat dish is Cumberland famous for?",
+            "choiceA": "A: Bacon",
+            "choiceB": "B: Deep-fried Mars Bars",
+            "choiceC": "C: Ribs",
+            "choiceD": "D: Sausage",
+            "answer": "D"
+        },
+        {
+            "index": 5,
+            "text": "Which British monarch succeeded Queen Victoria?",
+            "choiceA": "A: Elizabeth II",
+            "choiceB": "B: Edward VI",
+            "choiceC": "C: Edward VII",
+            "choiceD": "D: George VII",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "Richard III died at which battle?",
+            "choiceA": "A: Bosworth Field",
+            "choiceB": "B: Barnet",
+            "choiceC": "C: Hastings",
+            "choiceD": "D: York",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "Who was the last viceroy of India?",
+            "choiceA": "A: Clive",
+            "choiceB": "B: George VI",
+            "choiceC": "C: Prince Louis of Battenburg",
+            "choiceD": "D: Lord Louis Mountbatten",
+            "answer": "D"
+        }
+    ]
+}

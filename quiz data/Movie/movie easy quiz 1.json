@@ -1,0 +1,71 @@
+{
+    "name": "Movie Easy Quiz ",
+    "difficulty": "EASY",
+    "category": "Movies",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "How long is the first Harry Potter movie: Harry Potter and The Philosopher's Stone?",
+            "choiceA": "A: 1.5 hours",
+            "choiceB": "B: 2.5 hours",
+            "choiceC": "C: 3.5 hours",
+            "choiceD": "D: 4.5 hours",
+            "answer": "B"
+        },
+        {
+            "index": 2,
+            "text": "Which 1984 film featured a main character named Axel Foley?",
+            "choiceA": "A: Back To The Future",
+            "choiceB": "B: Beverley Hills Cop",
+            "choiceC": "C: Footloose",
+            "choiceD": "D: The Breakfast Club",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "What is Dorothy's surname in The Wizard of Oz?",
+            "choiceA": "A: Bale",
+            "choiceB": "B: Gale",
+            "choiceC": "C: Hale",
+            "choiceD": "D: Yale",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "Who plays a character named Lee Christmas in 'The Expendables' series of films?",
+            "choiceA": "A: Jason Statham",
+            "choiceB": "B: Jet Li",
+            "choiceC": "C: Sylvester Stallone",
+            "choiceD": "D: Arnold Schwarzenegger",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "Who perfroms the most on-screen kills in the Lord of The Rings movies?",
+            "choiceA": "A: Boromir",
+            "choiceB": "B: Frodo",
+            "choiceC": "C: Gimli",
+            "choiceD": "D: Legolas",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "Which of the following actresses appeared in the 1986 film `Top Gun`?",
+            "choiceA": "A: Helen Hunt",
+            "choiceB": "B: Michelle Pfeiffer",
+            "choiceC": "C: Meg Ryan",
+            "choiceD": "D: Julia Roberts",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "Who was offered and turned down the part of Han Solo in the original Star Wars film?",
+            "choiceA": "A: Sylvester Stallone",
+            "choiceB": "B: Bruce Willis",
+            "choiceC": "C: Al Pacino",
+            "choiceD": "D: Roger Moore",
+            "answer": "c"
+        }
+    ]
+}
