@@ -1,0 +1,71 @@
+{
+    "name": "I like Chemistry",
+    "difficulty": "MEDIUM",
+    "category": "Chemistry",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Which of the following is not a standard condition?",
+            "choiceA": "A: 298 K",
+            "choiceB": "B: 100 kPa",
+            "choiceC": "C: 100 atm",
+            "choiceD": "D: 1 mol dm⁻³ solutions",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "Which is the equivalent to the formation of carbon dioxide?",
+            "choiceA": "A: combustion of hydrogen(g)",
+            "choiceB": "B: complete combustion of carbon(s)",
+            "choiceC": "C: complete combustion of propane(l)",
+            "choiceD": "D: incomplete combustion of propane(g)",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "15 g of octane is burned and used to heat 50 cm³ of water by 15 °C. What is the amount of energy transferred to the water? Assume water density of 1 g cm⁻³ and a specific heat capacity of 4.18 J g⁻¹ K⁻¹.",
+            "choiceA": "A: 940.5 J",
+            "choiceB": "B: 3135 J",
+            "choiceC": "C: 940.5 kJ",
+            "choiceD": "D: 3135 kJ",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "Which does not increase rate by affecting the number or nature of collisions?",
+            "choiceA": "A: adding a catalyst ",
+            "choiceB": "B: increasing the pressure ",
+            "choiceC": "C: increasing the surface area",
+            "choiceD": "D: increasing the temperature ",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "What is the meaning of a heterogeneous catalyst?",
+            "choiceA": "A: A catalyst which stays the same throughout the reaction.",
+            "choiceB": "B: A catalyst which changes throughout the reaction.",
+            "choiceC": "C: A catalyst in the same state as the reactants.",
+            "choiceD": "D: A catalyst in a different state to the reactants.",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "Which does not describe a reaction at equilibrium?",
+            "choiceA": "A: Forward and backward reactions occur at equal rate.",
+            "choiceB": "B: The system must be closed.",
+            "choiceC": "C: Kc increases as the reaction progresses.",
+            "choiceD": "D: Concentrations of reactants and products are constant.",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "The energy associated with a photon of electromagnetic radiation is ",
+            "choiceA": "A: independent of the frequency",
+            "choiceB": "B: proportional to the frequency",
+            "choiceC": "C: inversely proportional to the frequency",
+            "choiceD": "D: proportional to the square of the frequency",
+            "answer": "B"
+        }
+    ]
+}

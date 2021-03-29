@@ -1,0 +1,71 @@
+{
+    "name": "Chemistry Basics",
+    "difficulty": "EASY",
+    "category": "Chemistry",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Tartaric acid can be obtained from ",
+            "choiceA": "A: Grapes",
+            "choiceB": "B: Orange",
+            "choiceC": "C: Papaya",
+            "choiceD": "D: Lemon",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "An atom consists of ",
+            "choiceA": "A: Protons",
+            "choiceB": "B: Electrons",
+            "choiceC": "C: Neutrons and Electrons",
+            "choiceD": "D: Nucleus and Electrons",
+            "answer": "D"
+        },
+        {
+            "index": 3,
+            "text": "Which among the following is used in flash lamps?",
+            "choiceA": "A: Ammonia",
+            "choiceB": "B: Xenon",
+            "choiceC": "C: Ethylene",
+            "choiceD": "D: Methane",
+            "answer": "D"
+        },
+        {
+            "index": 4,
+            "text": "If someone reduces the volume of gas at a constant temperature, what will be the impact on pressure?",
+            "choiceA": "A: It will increase",
+            "choiceB": "B: It will decrease",
+            "choiceC": "C: It will remain same",
+            "choiceD": "D: First it will increase, but later decrease",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "Why does silver turn black?",
+            "choiceA": "A: Reaction with sulfur",
+            "choiceB": "B: Reaction with hydrogen",
+            "choiceC": "C: Reaction with Nitrogen",
+            "choiceD": "D: A & B",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "In reference to periodic table, noble gases belong to ",
+            "choiceA": "A: Group 2",
+            "choiceB": "B: Group 11",
+            "choiceC": "C: Group 15",
+            "choiceD": "D: Group 18",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "Which one of the following is correctly defines the ‘Oxidation?’",
+            "choiceA": "A: It is gain of protons",
+            "choiceB": "B: It is loss of electrons",
+            "choiceC": "C: It is gain of neutrons",
+            "choiceD": "D: It is loss of neutrons and protons",
+            "answer": "B"
+        }
+    ]
+}

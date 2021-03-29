@@ -138,19 +138,25 @@ def add_record(user, quiz, score=0):
 
 
 def read_json_files(dir_path):
+    """Read all the json files in the given directory and its sub directory. Return a list of quiz's dictionaries."""
     import json
     import os
 
     quiz_list = []
-    file_ignore = ['Quiz of Day']
-    for folder in os.listdir(dir_path):
-        if folder in file_ignore:
+    file_ignore = [os.path.join(dir_path, 'Quiz of Day'),]
+
+    for file in os.listdir(dir_path): 
+        file_path = os.path.join(dir_path, file)
+
+        if file_path in file_ignore:
             continue
 
-        for file in os.listdir(os.path.join(dir_path, folder)):
-            with open(os.path.join(dir_path, folder, file), 'r') as quiz:
+        if os.path.isdir(file_path):
+            quiz_list.extend(read_json_files(file_path))
+        else:
+            with open(file_path, 'r', encoding='utf-8') as quiz:
                 quiz_list.append(json.load(quiz))
-
+            
     return quiz_list
 
 
@@ -230,7 +236,7 @@ def create_json_template(file_path):
 
 ############################## remember to delete ####################################
 def test():
-    # cate_obj = Category.objects.get(name='History')
+    cate_obj = Category.objects.get(name='History')
 
     print('--', Category.objects.get(name='History').quiz_set.all())
     print('--', Quiz.objects.filter(category__name='History', difficulty='EASY'))
@@ -244,6 +250,7 @@ def test():
     print('--', quiz_obj.question_set.all())
     print('--', Question.objects.all())
 
+
 ########################################################################################
 
 
@@ -253,7 +260,7 @@ if __name__ == '__main__':
     print('Starting quizzit_app population script...')
     populate()
     # test()
-    # create_json_template(r'quiz data/Quiz of Day/quiz of day hard quiz 1.json')
+    # create_json_template(r'quiz data/Chemistry/Chemitry hard quiz 1.json')
 
 
 
