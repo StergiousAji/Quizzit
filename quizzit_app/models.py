@@ -70,7 +70,7 @@ class Quiz(models.Model):
     def create_quizID(self):
         # all the id of quizzes with the same category name and difficulty level
         id_list = [q.id for q in Quiz.objects.filter(category__name=self.category.name, difficulty=self.difficulty)]
-#        # if the quiz does not exist yet
+        # if the quiz does not exist yet
         if self.id not in id_list:
             count = len(id_list)
             q_ID = '{}-{}-{}'.format(
@@ -90,10 +90,10 @@ class Question(models.Model):
 
     index = models.IntegerField()
     question_text = models.CharField(max_length=500)
-    choiceA = models.CharField(max_length=100)
-    choiceB = models.CharField(max_length=100)
-    choiceC = models.CharField(max_length=100)
-    choiceD = models.CharField(max_length=100)
+    choiceA = models.CharField(max_length=200)
+    choiceB = models.CharField(max_length=200)
+    choiceC = models.CharField(max_length=200)
+    choiceD = models.CharField(max_length=200)
     answer = models.CharField(max_length=1, choices=answer_choices)
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     
