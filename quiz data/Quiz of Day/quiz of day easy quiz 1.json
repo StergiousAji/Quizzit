@@ -1,0 +1,71 @@
+{
+    "name": "Quiz of Day Easy",
+    "difficulty": "EASY",
+    "category": "Quiz of Day",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "How many types of flamingo are there?",
+            "choiceA": "A: 3",
+            "choiceB": "B: 4",
+            "choiceC": "C: 5",
+            "choiceD": "D: 6",
+            "answer": "D"
+        },
+        {
+            "index": 2,
+            "text": "Which big cat can run the fastest?",
+            "choiceA": "A: Lion",
+            "choiceB": "B: Tiger",
+            "choiceC": "C: Leopard",
+            "choiceD": "D: Cheetah",
+            "answer": "D"
+        },
+        {
+            "index": 3,
+            "text": "With which baseball team did Jose DiMaggio achieve icon status in the 1940s?",
+            "choiceA": "A: Chicago Bears",
+            "choiceB": "B: New York Yankees",
+            "choiceC": "C: Baltimore Batters",
+            "choiceD": "D: Cleveland Steelers",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "What type of cheese is Stilton?",
+            "choiceA": "A: Blue",
+            "choiceB": "B: Green",
+            "choiceC": "C: Hard",
+            "choiceD": "D: Mouldy",
+            "answer": "B"
+        },
+        {
+            "index": 5,
+            "text": "What do you add to milk to make porridge?",
+            "choiceA": "A:Cruel",
+            "choiceB": "B:Oats",
+            "choiceC": "C:Sugar",
+            "choiceD": "D:Whisky",
+            "answer": "B"
+        },
+        {
+            "index": 6,
+            "text": "What is minestrone?",
+            "choiceA": "A: Cheese",
+            "choiceB": "B: Noodles",
+            "choiceC": "C: A type of potato",
+            "choiceD": "D: Soup",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "What is bottled tomato sauce called?",
+            "choiceA": "A: Brown sauce",
+            "choiceB": "B: HP sauce",
+            "choiceC": "C: Ketchup",
+            "choiceD": "D: Piccalilli",
+            "answer": "C"
+        }
+    ]
+}

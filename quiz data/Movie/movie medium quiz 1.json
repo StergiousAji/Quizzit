@@ -1,0 +1,71 @@
+{
+    "name": "Movie Medium",
+    "difficulty": "MEDIUM",
+    "category": "Movies",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "What kind of thing is 'Red October' in the 1990 film 'The Hunt For Red October'?",
+            "choiceA": "A: Missile",
+            "choiceB": "B: Computer Program",
+            "choiceC": "C: Submarine",
+            "choiceD": "D: Person",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "How many Oscars did the 1994 movie Forrest Gump win?",
+            "choiceA": "A: 3 oscars",
+            "choiceB": "B: 6 oscars",
+            "choiceC": "C: 9 oscars",
+            "choiceD": "D: 12 oscars",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "In which form did 'The Jungle Book' originally appear?",
+            "choiceA": "A: Book",
+            "choiceB": "B: Film",
+            "choiceC": "C: Radio Play",
+            "choiceD": "D: An app",
+            "answer": "A"
+        },
+        {
+            "index": 4,
+            "text": "In the classic 1980 movie 'Flash', Brian Blessed plays the King of which race?",
+            "choiceA": "A: The Hawkmen",
+            "choiceB": "B: The Treemen",
+            "choiceC": "C: The Icemen",
+            "choiceD": "D: The Mole Men",
+            "answer": "B"
+        },
+        {
+            "index": 5,
+            "text": "Which city is the setting for the 1950s film musical Gigi?",
+            "choiceA": "A: London",
+            "choiceB": "B: Rio de Janeiro",
+            "choiceC": "C: New York",
+            "choiceD": "D: Paris",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "What is the correct title of the 2009 film starring Zooey Deschanel?",
+            "choiceA": "A: 100 days of summer",
+            "choiceB": "B: 200 days of summer",
+            "choiceC": "C: 500 days of summer",
+            "choiceD": "D: 1000 days of Summer",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "Who played the title role in the 1971 film 'Klute'?",
+            "choiceA": "A: Donald Sutherland",
+            "choiceB": "B: Gene Hackman",
+            "choiceC": "C: Robert Duvall",
+            "choiceD": "D: Clint Eastwood",
+            "answer": "A"
+        }
+    ]
+}
