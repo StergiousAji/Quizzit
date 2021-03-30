@@ -31,7 +31,6 @@ class Category(models.Model):
         self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
-
     def __str__(self):
         return self.name
 

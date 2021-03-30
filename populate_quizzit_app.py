@@ -247,7 +247,8 @@ def test():
     print('-- {}, {}, {}'.format(quiz_obj, type(quiz_obj), quiz_obj.id))
     print('-- {}, {}, {}'.format(quiz_obj.name, quiz_obj.difficulty, quiz_obj.category))
     print('--', quiz_obj.views)
-    print('--', quiz_obj.question_set.all())
+    print('--', quiz_obj.question_set.all()[0])
+    print('--', quiz_obj.question_set.get(index=1))
     print('--', Question.objects.all())
 
 
@@ -258,8 +259,8 @@ def test():
 # Start execution here!
 if __name__ == '__main__':
     print('Starting quizzit_app population script...')
-    populate()
-    # test()
+    # populate()
+    test()
     # create_json_template(r'quiz data/Chemistry/Chemitry hard quiz 1.json')
 
 
