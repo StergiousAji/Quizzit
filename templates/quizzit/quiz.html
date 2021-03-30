@@ -18,11 +18,14 @@
         <p id="ten-countdown"></p>
     </div>
     <div class="question-container">
-        <h1 class="txtQuestion">What were the surfaces of Egypt's ancient pyramids covered with?</h1>
+        <!-- 
+            <h1 class="txtQuestion">{{ questions|index:x}} </h1>
+         -->
+        <h1 class="txtQuestion">{{ questions|index:1 }} </h1>
     </div>
 
     <div class="multiple-choice-container" id="1">
-        <button id="btnAnswer1">Answer 1 dsafjda jdfajjd dkjafojd djs</button>
+        <button id="btnAnswer1" onclick="">Answer 1 dsafjda jdfajjd dkjafojd djs</button>
         <button id="btnAnswer2">Answer 2</button>
     </div>
     <div class="multiple-choice-container" id="2">
@@ -35,6 +38,5 @@
         <p>1/7</p>
         <a class="next">Next &#8250;</a>
     </div>
-
-    <script type="text/javascript" src="{% static 'js/quiz.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/quiz.js' %}"></script>    
 {% endblock %}

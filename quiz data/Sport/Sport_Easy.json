@@ -1,0 +1,71 @@
+{
+    "name": "Sport: For kids",
+    "difficulty": "EASY",
+    "category": "Sport",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Whats the maximum score you can achieve in 10-pin bowling?",
+            "choiceA": "A: 300",
+            "choiceB": "B: 280",
+            "choiceC": "C: 287",
+            "choiceD": "D: 320",
+            "answer": "A"
+        },
+        {
+            "index": 2,
+            "text": "Where were the Olympics held in 1992?",
+            "choiceA": "A: London",
+            "choiceB": "B: Barcelona",
+            "choiceC": "C: Poland ",
+            "choiceD": "D: Germany",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "Who won best womens player at Fifa's 2020 awards?",
+            "choiceA": "A: Lucy Bronze",
+            "choiceB": "B: Alex Morgan",
+            "choiceC": "C: Abby Wambach",
+            "choiceD": "D: Vivianne Miedema",
+            "answer": "A"
+        },
+        {
+            "index": 4,
+            "text": "What is the left most colour of the Olympic rings?",
+            "choiceA": "A: Black",
+            "choiceB": "B: Yellow",
+            "choiceC": "C: Red",
+            "choiceD": "D: Blue",
+            "answer": "D"
+        },
+        {
+            "index": 5,
+            "text": "Name the only 2 positions who can score in netball?",
+            "choiceA": "A: Wing Attack and Goal Attack",
+            "choiceB": "B: Centre and Goal Shooter",
+            "choiceC": "C: Goal Shooter and Goal Attack",
+            "choiceD": "D: Wing Attack and Goal Shooter",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "In which sport do teams compete to win the Stanley Cup?",
+            "choiceA": "A: Basketball",
+            "choiceB": "B: MLS football",
+            "choiceC": "C: Ice Hockey",
+            "choiceD": "D: Baseball",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "What is Canada's national sport?",
+            "choiceA": "A: Lacrosse",
+            "choiceB": "B: Ice Hockey",
+            "choiceC": "C: Basketball",
+            "choiceD": "D: Wrestling",
+            "answer": "A"
+        }
+    ]
+}

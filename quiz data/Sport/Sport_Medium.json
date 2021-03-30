@@ -1,0 +1,71 @@
+{
+    "name": "Sport: For teenagers",
+    "difficulty": "MEDIUM",
+    "category": "Sport",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "What is the name Tyson Fury calls himself?",
+            "choiceA": "A: Irish Champ",
+            "choiceB": "B: Gypsy King",
+            "choiceC": "C: King of Boxing",
+            "choiceD": "D: The Tiger",
+            "answer": "B"
+        },
+        {
+            "index": 2,
+            "text": "What is the maximum break you can score in snooker?",
+            "choiceA": "A: 152",
+            "choiceB": "B: 137",
+            "choiceC": "C: 147",
+            "choiceD": "D: 144",
+            "answer": "C"
+        },
+        {
+            "index": 3,
+            "text": "What is the world record time for the 100 metres?",
+            "choiceA": "A: 9.53s",
+            "choiceB": "B: 8.87s",
+            "choiceC": "C: 9.58s",
+            "choiceD": "D: 9.23s",
+            "answer": "C"
+        },
+        {
+            "index": 4,
+            "text": "How many regulation strokes are there in swimming?",
+            "choiceA": "A: Four",
+            "choiceB": "B: Three",
+            "choiceC": "C: Five",
+            "choiceD": "D: Two",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "Which country won the first ever football world cup?",
+            "choiceA": "A: France",
+            "choiceB": "B: Uruguay",
+            "choiceC": "C: Spain",
+            "choiceD": "D: Argetina",
+            "answer": "B"
+        },
+        {
+            "index": 6,
+            "text": "Who was re-elected as chairman of Wolrd Rugby during May?",
+            "choiceA": "A: David Abell",
+            "choiceB": "B: Andrew Brownsword",
+            "choiceC": "C: John Hall",
+            "choiceD": "D: Sir Bill Beaumont",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "In which sport could someone be found at silly point?",
+            "choiceA": "A: Ice Hockey",
+            "choiceB": "B: Cricket",
+            "choiceC": "C: Baseball",
+            "choiceD": "D: Netball",
+            "answer": "B"
+        }
+    ]
+}

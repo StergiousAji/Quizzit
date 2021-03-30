@@ -1,3 +1,10 @@
+let x = 0
+  
+for (var i = 1; i<2 ; i++) {​​​​​ 
+    {{ questions|index:i}}
+}
+
+
 function countdown( elementName, minutes, seconds )
 {
     var element, endTime, hours, mins, msLeft, time;
@@ -26,9 +33,13 @@ function countdown( elementName, minutes, seconds )
     updateTimer();
 }
 
-if(document.getElementById('btnAnswer1').clicked == true)
-{
-   document.getElementsById('btnAnswer1').style.borderColor = "red";
+
+
+function highlightButton() {
+    if(document.getElementById('btnAnswer').clicked == true)
+    {
+        document.getElementsById('btnAnswer1').style.borderColor = '#a83232';
+    }
 }
 
 countdown( "ten-countdown", 10, 0);

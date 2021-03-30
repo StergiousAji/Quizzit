@@ -9,6 +9,7 @@ h1.invalid {
     padding: 15px;
   }
   
+
   /* Full-width input fields */
   form input[type=text], form input[type=password], form input[type=email] {
     width: 400px;

@@ -90,10 +90,10 @@ class Question(models.Model):
 
     index = models.IntegerField()
     question_text = models.CharField(max_length=500)
-    choiceA = models.CharField(max_length=100)
-    choiceB = models.CharField(max_length=100)
-    choiceC = models.CharField(max_length=100)
-    choiceD = models.CharField(max_length=100)
+    choiceA = models.CharField(max_length=200)
+    choiceB = models.CharField(max_length=200)
+    choiceC = models.CharField(max_length=200)
+    choiceD = models.CharField(max_length=200)
     answer = models.CharField(max_length=1, choices=answer_choices)
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     

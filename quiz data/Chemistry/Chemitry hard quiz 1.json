@@ -1,0 +1,71 @@
+{
+    "name": "Chemistry Expert",
+    "difficulty": "HARD",
+    "category": "Chemistry",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "An element X forms an ion, X³⁺, which contains 55 electrons. In which block of the periodic table would element X be found?",
+            "choiceA": "A: s",
+            "choiceB": "B: p",
+            "choiceC": "C: d",
+            "choiceD": "D: f",
+            "answer": "D"
+        },
+        {
+            "index": 2,
+            "text": "Which of the following decreases when an aqueous solution of ethanoic acid is diluted?",
+            "choiceA": "A: pH",
+            "choiceB": "B: [H⁺]",
+            "choiceC": "pKₐ",
+            "choiceD": "Kₐ",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "Which of the following statements is not true?",
+            "choiceA": "A: 0.1 mol l⁻¹ hydrochloric acid has a hydrogen ion concentration of 0.1 mol l⁻¹.",
+            "choiceB": "B: 20.0 cm³ of 0.1 mol l⁻¹ sodium hydroxide is exactly neutralised by 20.0 cm³ of 0.1 mol l⁻¹ ethanoic acid.",
+            "choiceC": "C: The pH of 0.1 mol l⁻¹ hydrochloric acid is lower than that of 0.1 mol l⁻¹ ethanoic acid.",
+            "choiceD": "D: The Kₐ value for ethanoic acid is greater than that of hydrochloric acid.",
+            "answer": "D"
+        },
+        {
+            "index": 4,
+            "text": "The standard enthalpy of formation of strontium chloride is the enthalpy change for",
+            "choiceA": "A: Sr(s) + 2Cl(g) → SrCl₂(s)",
+            "choiceB": "B: Sr(s) + Cl₂(g) → SrCl₂(s)",
+            "choiceC": "C: Sr²⁺(g) + 2Cl⁻(g) → SrCl₂(s)",
+            "choiceD": "D: Sr²⁺(aq) + 2Cl⁻(aq) → SrCl₂(s)",
+            "answer": "B"
+        },
+        {
+            "index": 5,
+            "text": "Which of the following alcohols would have the greatest entropy at 90 ºC?",
+            "choiceA": "A: Propan-1-ol",
+            "choiceB": "B: Butan-1-ol",
+            "choiceC": "C: Propan-2-ol",
+            "choiceD": "D: Butan-2-ol",
+            "answer": "C"
+        },
+        {
+            "index": 6,
+            "text": "The order of a reactant in a reaction",
+            "choiceA": "A: can only be obtained by experiment",
+            "choiceB": "B: determines the speed of the overall reaction",
+            "choiceC": "C: is determined by the stoichiometry involved",
+            "choiceD": "D: is the sequence of steps in the reaction mechanism.",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "Which of the following compounds will react with both dilute hydrochloric acid and sodium hydroxide solution?",
+            "choiceA": "A: C₆H₅OH",
+            "choiceB": "B: C₆H₅NH₂",
+            "choiceC": "C: HOC₆H₄COOH",
+            "choiceD": "D: H₂NC₆H₄COOH",
+            "answer": "D"
+        }
+    ]
+}

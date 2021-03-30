@@ -44,12 +44,16 @@ def quiz(request, category_name_slug, quiz_name_slug):
     context_dict = {'categories': category_list,}
     # .get() method returns only one object or a DoesNotExist exception
     try:
-        quizzes = Quiz.objects.get(slug=quiz_name_slug)
-        quizzes.views += 1
-        quizzes.save()
-        context_dict['quizzes'] = quizzes
+        quiz = Quiz.objects.get(slug=quiz_name_slug)
+        quiz.views += 1
+        quiz.save()
+        questions = list(Quiz.objects.get(quizID=quiz.quizID).question_set.all())
+        context_dict['quiz'] = quiz
+        context_dict['questions'] = questions
+        context_dict['x'] = 0
     except Category.DoesNotExist:
-         context_dict['quizzes'] = None
+         context_dict['quiz'] = None
+         context_dict['questions'] = None
 
     return render(request, 'quizzit/quiz.html', context=context_dict)
 

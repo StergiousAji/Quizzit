@@ -1,0 +1,71 @@
+{
+    "name": "History: For Teenagers",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Neil Armstrong and Buzz Aldrin were astronauts on the Apollo 11 space mission to the moon. But who was the third astronaut?",
+            "choiceA": "A: Eugene Cernan",
+            "choiceB": "B: Harrison Schmitt",
+            "choiceC": "C: Fred Haise",
+            "choiceD": "D: Michael Collins",
+            "answer": "D"
+        },
+        {
+            "index": 2,
+            "text": "How many millions of years ago did the dinosaurs become extinct",
+            "choiceA": "A: 65 million",
+            "choiceB": "B: 60 million",
+            "choiceC": "C: 40 million",
+            "choiceD": "D: 55 million",
+            "answer": "A"
+        },
+        {
+            "index": 3,
+            "text": "New York was known by a different name before 1664. What was that name?",
+            "choiceA": "A: New Amsterdam",
+            "choiceB": "B: York",
+            "choiceC": "C: New town",
+            "choiceD": "D: York town",
+            "answer": "A"
+        },
+        {
+            "index": 4,
+            "text": "What disease was eliminated in 1979?",
+            "choiceA": "A: Polio",
+            "choiceB": "B: Measles",
+            "choiceC": "C: Smallpox",
+            "choiceD": "D: Yaws",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "When was the first modern chocolate bar invented?",
+            "choiceA": "A: 1848",
+            "choiceB": "B: 1911",
+            "choiceC": "C: 1832",
+            "choiceD": "D: 1847",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "From which country did Vietnam claim independence in 1945?",
+            "choiceA": "A: France",
+            "choiceB": "B: Germany",
+            "choiceC": "C: Poland",
+            "choiceD": "D: Spain",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "Which country did Algeria gain independence from in 1962?",
+            "choiceA": "A: Germany",
+            "choiceB": "B: Portugal",
+            "choiceC": "C: France",
+            "choiceD": "D: Sweden",
+            "answer": "C"
+        }
+    ]
+}
