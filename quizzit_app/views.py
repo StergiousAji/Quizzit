@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
+
 category_list = Category.objects.all()
 
 # Create your views here.
@@ -123,7 +124,7 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return redirect(reverse('rango:index'),)
+    return redirect(reverse('quizzit:home'))
 
 def leaderboards(request):
     context_dict = {'categories': category_list,}
