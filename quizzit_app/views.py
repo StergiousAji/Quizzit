@@ -39,7 +39,7 @@ def show_category(request, category_name_slug):
         context_dict['category'] = None
         context_dict['quiz'] = None
     
-    #Reset the Question index
+    # Reset the Question index and booleans
     index = 0
 
     return render(request, 'quizzit/category.html', context=context_dict)
@@ -56,9 +56,9 @@ def quiz(request, category_name_slug, quiz_name_slug):
         context_dict['question'] = question
         context_dict['index'] = index
     except Category.DoesNotExist:
-         context_dict['quiz'] = None
-         context_dict['question'] = None
-         context_dict['index'] = 0
+        context_dict['quiz'] = None
+        context_dict['question'] = None
+        context_dict['index'] = None
 
     return render(request, 'quizzit/quiz.html', context=context_dict)
 

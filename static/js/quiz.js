@@ -1,4 +1,4 @@
-function countdown( elementName, minutes, seconds )
+function countdown(elementName, minutes, seconds)
 {
     var element, endTime, hours, mins, msLeft, time;
 
@@ -26,4 +26,22 @@ function countdown( elementName, minutes, seconds )
     updateTimer();
 }
 
-countdown( "ten-countdown", 10, 0);
+countdown("ten-countdown", 10, 0);
+
+var chosenAnswer;
+function chooseButton(button) {
+    // Reset All Choice Buttons
+    choiceButtons = document.getElementsByClassName('mc-buttons');
+    for (i = 0; i < choiceButtons.length; i++) {
+        choiceButtons[i].style.borderColor = '#000000';
+        choiceButtons[i].style.color = '#000000';
+    }
+
+    button.style.borderColor = '#ffffff';
+    button.style.color = '#ffffff';
+
+    //Save Chosen Answer
+    chosenAnswer = button.innerHTML;
+
+    document.getElementById('r').innerHTML = chosenAnswer;
+}

@@ -1,5 +1,5 @@
 {
-    "name": "TV Shows: Easy",
+    "name": "TV Shows Are Easy Peasy",
     "difficulty": "EASY",
     "category": "TV Shows",
     "views": 0,
@@ -8,7 +8,7 @@
             "index": 1,
             "text": "Which supernatural show is set in the fictional town of Hawkins, Indiana?",
             "choiceA": "A: Teen Wolf",
-            "choiceB": "B: Indiana",
+            "choiceB": "B: Parks and Recreation",
             "choiceC": "C: Stranger Things",
             "choiceD": "D: Goosebumps",
             "answer": "C"

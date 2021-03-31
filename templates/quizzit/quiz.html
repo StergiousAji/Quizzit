@@ -20,14 +20,14 @@
     <div class="question-container">
         <h1 class="txtQuestion">{{ question.question_text }} </h1>
     </div>
-
+    <h1 id="r"></h1>
     <div class="multiple-choice-container" id="1">
-        <button id="btnAnswer1">{{ question.choiceA }}</button>
-        <button id="btnAnswer2">{{ question.choiceB }}</button>
+        <button class="mc-buttons" id="btnChoiceA" onclick="chooseButton(this)">{{ question.choiceA }}</button>
+        <button class="mc-buttons" id="btnChoiceB" onclick="chooseButton(this)">{{ question.choiceB }}</button>
     </div>
     <div class="multiple-choice-container" id="2">
-        <button id="btnAnswer3">{{ question.choiceC }}</button>
-        <button id="btnAnswer4">{{ question.choiceD }}</button>
+        <button class="mc-buttons" id="btnChoiceC" onclick="chooseButton(this)">{{ question.choiceC }}</button>
+        <button class="mc-buttons" id="btnChoiceD" onclick="chooseButton(this)">{{ question.choiceD }}</button>
     </div>
 
     <div class="control-question-container">

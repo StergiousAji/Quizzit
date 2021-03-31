@@ -63,7 +63,7 @@ class Quiz(models.Model):
 
     def save(self, *args, **kwargs):
         self.create_quizID()
-        self.slug = slugify(self.quizID)
+        self.slug = slugify(self.name)
 
         super(Quiz, self).save(*args, **kwargs)
 
