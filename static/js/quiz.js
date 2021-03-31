@@ -1,6 +1,6 @@
 function countdown(elementName, minutes, seconds, criticalTimeMins)
 {
-    var element, endTime, hours, mins, msLeft, time;
+    let element, endTime, hours, mins, msLeft, time;
 
     element = document.getElementById(elementName);
     endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
@@ -32,7 +32,7 @@ function countdown(elementName, minutes, seconds, criticalTimeMins)
 
 countdown("ten-countdown", 10, 0, 1);
 
-var chosenAnswer;
+let chosenAnswer;
 function chooseButton(button) {
     // Reset All Choice Buttons
     choiceButtons = document.getElementsByClassName('mc-buttons');
