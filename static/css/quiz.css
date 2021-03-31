@@ -42,6 +42,7 @@ div.multiple-choice-container {
 div.multiple-choice-container button {
     font-size: 30px;
     padding: 40px;
+    font-weight: bold;
     width: 600px;
     margin: 20px;
     border-radius: 7px;

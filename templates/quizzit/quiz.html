@@ -18,19 +18,16 @@
         <p id="ten-countdown"></p>
     </div>
     <div class="question-container">
-        <!-- 
-            <h1 class="txtQuestion">{{ questions|index:x}} </h1>
-         -->
-        <h1 class="txtQuestion">{{ questions.0.question_text }} </h1>
+        <h1 class="txtQuestion">{{ question.question_text }} </h1>
     </div>
 
     <div class="multiple-choice-container" id="1">
-        <button id="btnAnswer1" onclick="">Answer 1 dsafjda jdfajjd dkjafojd djs</button>
-        <button id="btnAnswer2">Answer 2</button>
+        <button id="btnAnswer1">{{ question.choiceA }}</button>
+        <button id="btnAnswer2">{{ question.choiceB }}</button>
     </div>
     <div class="multiple-choice-container" id="2">
-        <button id="btnAnswer3">Answer 3</button>
-        <button id="btnAnswer4">Shithead</button>
+        <button id="btnAnswer3">{{ question.choiceC }}</button>
+        <button id="btnAnswer4">{{ question.choiceD }}</button>
     </div>
 
     <div class="control-question-container">

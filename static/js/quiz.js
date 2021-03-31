@@ -1,10 +1,3 @@
-let x = 0
-  
-for (var i = 1; i<2 ; i++) {​​​​​ 
-    {{ questions|index:i}}
-}
-
-
 function countdown( elementName, minutes, seconds )
 {
     var element, endTime, hours, mins, msLeft, time;
@@ -31,15 +24,6 @@ function countdown( elementName, minutes, seconds )
     element = document.getElementById( elementName );
     endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
     updateTimer();
-}
-
-
-
-function highlightButton() {
-    if(document.getElementById('btnAnswer').clicked == true)
-    {
-        document.getElementsById('btnAnswer1').style.borderColor = '#a83232';
-    }
 }
 
 countdown( "ten-countdown", 10, 0);

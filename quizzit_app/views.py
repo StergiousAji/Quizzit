@@ -25,6 +25,7 @@ def categories(request):
     
     return render(request, 'quizzit/categories.html', context_dict)
 
+index = 0
 def show_category(request, category_name_slug):
     context_dict = {'categories': category_list,}
     # .get() method returns only one object or a DoesNotExist exception
@@ -37,6 +38,9 @@ def show_category(request, category_name_slug):
     except Category.DoesNotExist:
         context_dict['category'] = None
         context_dict['quiz'] = None
+    
+    #Reset the Question index
+    index = 0
 
     return render(request, 'quizzit/category.html', context=context_dict)
 
@@ -47,13 +51,14 @@ def quiz(request, category_name_slug, quiz_name_slug):
         quiz = Quiz.objects.get(slug=quiz_name_slug)
         quiz.views += 1
         quiz.save()
-        questions = list(Quiz.objects.get(quizID=quiz.quizID).question_set.all())
+        question = Quiz.objects.get(quizID=quiz.quizID).question_set.all()[index]
         context_dict['quiz'] = quiz
-        context_dict['questions'] = questions
-        context_dict['x'] = 0
+        context_dict['question'] = question
+        context_dict['index'] = index
     except Category.DoesNotExist:
          context_dict['quiz'] = None
-         context_dict['questions'] = None
+         context_dict['question'] = None
+         context_dict['index'] = 0
 
     return render(request, 'quizzit/quiz.html', context=context_dict)
 
