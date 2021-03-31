@@ -14,26 +14,39 @@
 {% endblock %}
 
 {% block body_block %}
-    <div class="timer">
-        <p id="ten-countdown"></p>
-    </div>
-    <div class="question-container">
-        <h1 class="txtQuestion">{{ question.question_text }} </h1>
-    </div>
-    <h1 id="r"></h1>
-    <div class="multiple-choice-container" id="1">
-        <button class="mc-buttons" id="btnChoiceA" onclick="chooseButton(this)">{{ question.choiceA }}</button>
-        <button class="mc-buttons" id="btnChoiceB" onclick="chooseButton(this)">{{ question.choiceB }}</button>
-    </div>
-    <div class="multiple-choice-container" id="2">
-        <button class="mc-buttons" id="btnChoiceC" onclick="chooseButton(this)">{{ question.choiceC }}</button>
-        <button class="mc-buttons" id="btnChoiceD" onclick="chooseButton(this)">{{ question.choiceD }}</button>
-    </div>
+    {% if question %}
+        <div class="timer">
+            <p id="ten-countdown"></p>
+        </div>
+        
+        <div class="question-container">
+            <h1 class="txtQuestion">{{ question.question_text }} </h1>
+        </div>
 
-    <div class="control-question-container">
-        <a class="previous" onclick="history.back(-1)">&#8249; Previous</a>
-        <p>1/7</p>
-        <a class="next">Next &#8250;</a>
-    </div>
-    <script type="text/javascript" src="{% static 'js/quiz.js' %}"></script>    
+        <h1 id="r"></h1>
+
+        <div class="multiple-choice-container" id="1">
+            <button class="mc-buttons" id="btnChoiceA" onclick="chooseButton(this)">{{ question.choiceA }}</button>
+            <button class="mc-buttons" id="btnChoiceB" onclick="chooseButton(this)">{{ question.choiceB }}</button>
+        </div>
+        <div class="multiple-choice-container" id="2">
+            <button class="mc-buttons" id="btnChoiceC" onclick="chooseButton(this)">{{ question.choiceC }}</button>
+            <button class="mc-buttons" id="btnChoiceD" onclick="chooseButton(this)">{{ question.choiceD }}</button>
+        </div>
+
+        <div class="control-question-container">
+            <a class="previous" onclick="history.back(-1)">&#8249; Previous</a>
+            
+            <p>{{ question.index }}/{{ num_of_questions }}</p>
+
+            {% if question.index == num_of_questions %}
+                <a class="finish">Finish</a>
+            {% else %}
+                <a class="next">Next &#8250;</a>
+            {% endif %}
+        </div>
+        <script type="text/javascript" src="{% static 'js/quiz.js' %}"></script>
+    {% else %}
+        There is no question to show.
+    {% endif %}
 {% endblock %}

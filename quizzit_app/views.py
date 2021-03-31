@@ -25,6 +25,7 @@ def categories(request):
     
     return render(request, 'quizzit/categories.html', context_dict)
 
+# Global Variable index to display correct Question.
 index = 0
 def show_category(request, category_name_slug):
     context_dict = {'categories': category_list,}
@@ -40,6 +41,7 @@ def show_category(request, category_name_slug):
         context_dict['quiz'] = None
     
     # Reset the Question index and booleans
+    global index
     index = 0
 
     return render(request, 'quizzit/category.html', context=context_dict)
@@ -51,10 +53,19 @@ def quiz(request, category_name_slug, quiz_name_slug):
         quiz = Quiz.objects.get(slug=quiz_name_slug)
         quiz.views += 1
         quiz.save()
-        question = Quiz.objects.get(quizID=quiz.quizID).question_set.all()[index]
+
+        questions = Quiz.objects.get(quizID=quiz.quizID).question_set.all()
+        global index
+        # Only set the current question if index is less than number of questions.
+        if (index < len(questions)):
+            question = questions[index]
+        else:
+            question = None
+        
         context_dict['quiz'] = quiz
         context_dict['question'] = question
         context_dict['index'] = index
+        context_dict['num_of_questions'] = len(questions)
     except Category.DoesNotExist:
         context_dict['quiz'] = None
         context_dict['question'] = None

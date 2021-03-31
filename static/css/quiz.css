@@ -92,3 +92,9 @@ div.control-question-container a:hover {
     color: white;
 }
 
+.finish { 
+    background-color: #005dc7;
+    color: black;
+    font-weight: bold;
+}
+
