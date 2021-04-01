@@ -32,7 +32,8 @@ function countdown(elementName, minutes, seconds, criticalTimeMins)
 
 countdown("ten-countdown", 10, 0, 1);
 
-let chosenAnswer;
+const url = window.location.href;
+let chosenAnswer = null;
 function chooseButton(button) {
     // Reset All Choice Buttons
     choiceButtons = document.getElementsByClassName('mc-buttons');
@@ -46,6 +47,31 @@ function chooseButton(button) {
 
     //Save Chosen Answer
     chosenAnswer = button.innerHTML;
+}
 
-    document.getElementById('r').innerHTML = chosenAnswer;
+let question = document.getElementById('txtQuestion').innerHTML;
+let index = parseInt(document.getElementById('index').innerHTML);
+const csrf = document.getElementsByName('csrfmiddlewaretoken');
+console.log(question);
+console.log(index);
+function next() {
+    const data = {};
+    data['csrfmiddlewaretoken'] = csrf[0].value;
+    data[question] = chosenAnswer;
+    data['index'] = index;
+    console.log(data)
+
+    $.ajax({
+        type: 'POST',
+        url: `${url}`,
+        data: data,
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    })
+
+    location.reload();
 }
