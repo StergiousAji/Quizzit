@@ -28,12 +28,21 @@
             <button id="btnSearch" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <div id="right-content">
+            {% if user.is_authenticated %}
+            <a href="{% url 'quizzit:logout' %}">
+                <button class="right-buttons" id="btnLogin">Log out</button>
+            </a>
+                
+            
+            {% else %}
             <a href="{% url 'quizzit:register' %}">
                 <button class="right-buttons" id="btnSignUp">Sign Up</button>
             </a>
             <a href="{% url 'quizzit:login' %}">
-	            <button class="right-buttons" id="btnLogin">Log in</button>
+                <button class="right-buttons" id="btnLogin">Log in</button>
             </a>
+                
+            {% endif %}
         </div>
     </div>
     <div class="navbar">

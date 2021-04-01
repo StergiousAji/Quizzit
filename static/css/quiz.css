@@ -42,22 +42,24 @@ div.multiple-choice-container {
 div.multiple-choice-container button {
     font-size: 30px;
     padding: 40px;
+    font-weight: bold;
     width: 600px;
     margin: 20px;
     border-radius: 7px;
     height: 180px;
     cursor: pointer;
     border: 7px solid black;
+    outline: none;
 }
 
-#btnAnswer1 { background-color: #2676c0; }
-#btnAnswer1:hover {background-color: #4095e6; }
-#btnAnswer2 { background-color: #099249; }
-#btnAnswer2:hover {background-color: #2dd37a; }
-#btnAnswer3 { background-color: #c8293e; }
-#btnAnswer3:hover { background-color: #e64056; }
-#btnAnswer4 { background-color: #e0cd1c; }
-#btnAnswer4:hover { background-color: #e2d45b; }
+#btnChoiceA { background-color: #2676c0; }
+#btnChoiceA:hover {background-color: #4095e6; }
+#btnChoiceB { background-color: #099249; }
+#btnChoiceB:hover {background-color: #2dd37a; }
+#btnChoiceC { background-color: #c8293e; }
+#btnChoiceC:hover { background-color: #e64056; }
+#btnChoiceD { background-color: #e0cd1c; }
+#btnChoiceD:hover { background-color: #e2d45b; }
 
 div.control-question-container {
     display: flex;
@@ -88,5 +90,11 @@ div.control-question-container a:hover {
 .next {
     background-color: #4CAF50;
     color: white;
+}
+
+.finish { 
+    background-color: #005dc7;
+    color: black;
+    font-weight: bold;
 }
 
