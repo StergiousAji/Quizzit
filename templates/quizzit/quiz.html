@@ -20,10 +20,8 @@
         </div>
         
         <div class="question-container">
-            <h1 class="txtQuestion">{{ question.question_text }} </h1>
+            <h1 id="txtQuestion">{{ question.question_text }}</h1>
         </div>
-
-        <h1 id="r"></h1>
 
         <div class="multiple-choice-container" id="1">
             <button class="mc-buttons" id="btnChoiceA" onclick="chooseButton(this)">{{ question.choiceA }}</button>
@@ -35,16 +33,22 @@
         </div>
 
         <div class="control-question-container">
-            <a class="previous" onclick="history.back(-1)">&#8249; Previous</a>
-            
             <p>{{ question.index }}/{{ num_of_questions }}</p>
+            <p>{{ record_form }}</p>
 
             {% if question.index == num_of_questions %}
                 <a class="finish">Finish</a>
             {% else %}
-                <a class="next">Next &#8250;</a>
+                <form id="record_form" method="post" action="{% url 'quizzit:quiz' category_name_slug quiz.slug %}">
+                    {% csrf_token %}
+                    <a class="next" type="submit" name="submit" onclick="next()">Next &#8250;</a>
+                </form>
             {% endif %}
         </div>
+
+        <span id="index" style="visibility: hidden">{{ question.index }}</span>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="{% static 'js/quiz.js' %}"></script>
     {% else %}
         There is no question to show.

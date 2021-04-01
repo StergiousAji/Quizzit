@@ -1,5 +1,3 @@
-/* div.question-container {
-} */
 body {
     font-family:'Trebuchet MS';
 }
@@ -19,7 +17,7 @@ body {
     position: relative;
 }
 
-h1.txtQuestion {
+h1#txtQuestion {
     font-size: 60px;
     border-radius: 9px;
     border: 2px solid black;

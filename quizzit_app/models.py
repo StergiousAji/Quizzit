@@ -63,7 +63,7 @@ class Quiz(models.Model):
 
     def save(self, *args, **kwargs):
         self.create_quizID()
-        self.slug = slugify(self.name)
+        self.slug = slugify(self.quizID)
 
         super(Quiz, self).save(*args, **kwargs)
 
@@ -114,6 +114,7 @@ class Record(models.Model):
     user = models.ForeignKey(Register_User, on_delete=models.CASCADE)
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     score = models.IntegerField(default=0)
+    index = models.IntegerField(default=0)
 
 
     class Meta:
