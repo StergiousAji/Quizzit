@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from quizzit_app.models import Category, Record, Quiz, Register_User, UserProfile
+from quizzit_app.models import Category, Record, Quiz, Question, Register_User, UserProfile
 from quizzit_app.forms import UserForm, UserProfileForm, RecordForm
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
@@ -28,6 +28,10 @@ def categories(request):
 
 # Global Variable index to display correct Question.
 index = 0
+score = 0
+score_list = []
+user_done = False
+total_score = 0
 def show_category(request, category_name_slug):
     context_dict = {'categories': category_list,}
     # .get() method returns only one object or a DoesNotExist exception
@@ -42,14 +46,20 @@ def show_category(request, category_name_slug):
         context_dict['quiz'] = None
     
     # Reset the Question index and booleans
-    global index
+    global index, score, score_list, user_done, total_score
     index = 0
+    score = 0
+    user_done = False
+    total_score = 0
+    score_list = []
+    for i in range(7):
+        score_list.append(0)
 
     return render(request, 'quizzit/category.html', context=context_dict)
 
 def quiz(request, category_name_slug, quiz_name_slug):
     context_dict = {'categories': category_list,}
-    global index
+    global index, score, score_list, user_done, total_score
     try:
         quiz = Quiz.objects.get(slug=quiz_name_slug)
         quiz.views += 1
@@ -58,7 +68,7 @@ def quiz(request, category_name_slug, quiz_name_slug):
         questions = Quiz.objects.get(quizID=quiz.quizID).question_set.all()
 
         record = None
-        if (request.is_ajax()):
+        if (request.is_ajax() ):
             data = request.POST
             data_ = dict(data.lists())
             data_.pop('csrfmiddlewaretoken')
@@ -66,11 +76,21 @@ def quiz(request, category_name_slug, quiz_name_slug):
             user = request.user
             
             question_text = list(data_.keys())[0]
+            question = Question.objects.get(question_text=question_text)
             user_answer = data_[question_text]
             index = int(data_['index'][0])
+
+            print("User Answer: " + user_answer[0][0] + " | Correct Answer: " + question.answer)
+            print(index-1)
+            if (user_answer[0][0] == question.answer and score_list[index-1] == 0):
+                score_list[index-1] = 1
             
-            # if (user_answer == question.answer)
-            #     record_form = RecordForm()
+            print("Score: " + str(score_list))
+
+            if (question.index == len(questions)):
+                total_score = sum(score_list)
+                
+                user_done = True
         #     record_form = RecordForm(request.POST)
         #     if (record_form.is_valid()):
         #         record_form.index += 1
@@ -95,6 +115,8 @@ def quiz(request, category_name_slug, quiz_name_slug):
         context_dict['question'] = question
         context_dict['index'] = index
         context_dict['num_of_questions'] = len(questions)
+        context_dict['user_done'] = user_done
+        context_dict['user_score'] = total_score
     except Category.DoesNotExist:
         context_dict['quiz'] = None
         context_dict['question'] = None

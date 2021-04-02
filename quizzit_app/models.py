@@ -113,8 +113,6 @@ class Record(models.Model):
     user = models.ForeignKey(Register_User, on_delete=models.CASCADE)
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     score = models.IntegerField(default=0)
-    index = models.IntegerField(default=0)
-
 
     class Meta:
         verbose_name_plural = 'Records'
