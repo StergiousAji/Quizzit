@@ -1,10 +1,10 @@
-function countdown(elementName, minutes, seconds, criticalTimeMins)
+function countdown(elementName, minutes, seconds, criticalTimeSecs)
 {
     let element, endTime, hours, mins, msLeft, time;
 
     element = document.getElementById(elementName);
     endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-    criticalTime = (new Date(1000*(60*(criticalTimeMins-1) + 59) + 500))
+    criticalTime = (new Date(1000*(criticalTimeSecs) + 500))
     updateTimer();
 
     function twoDigits(n) {
@@ -14,7 +14,7 @@ function countdown(elementName, minutes, seconds, criticalTimeMins)
     function updateTimer() {
         msLeft = endTime - (+new Date);
         if (msLeft < 1000) {
-            window.location.replace("https://www.tutorialrepublic.com/%22");
+            window.location.reload();
         } else {
             time = new Date(msLeft);
             hours = time.getUTCHours();
@@ -30,7 +30,7 @@ function countdown(elementName, minutes, seconds, criticalTimeMins)
     }
 }
 
-countdown("ten-countdown", 10, 0, 1);
+countdown("ten-countdown", 0, 30, 5);
 
 const url = window.location.href;
 let chosenAnswer = null;
@@ -54,7 +54,8 @@ let index = parseInt(document.getElementById('index').innerHTML);
 const csrf = document.getElementsByName('csrfmiddlewaretoken');
 console.log(question);
 console.log(index);
-function next() {
+
+function send_request() {
     const data = {};
     data['csrfmiddlewaretoken'] = csrf[0].value;
     data[question] = chosenAnswer;
@@ -72,6 +73,9 @@ function next() {
             console.log(error);
         }
     })
+}
 
-    location.reload();
+function next() {
+    send_request();
+    window.location.reload();
 }
