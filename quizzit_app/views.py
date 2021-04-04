@@ -12,7 +12,11 @@ category_list = Category.objects.all()
 
 # Create your views here.
 def home(request):
-    context_dict = {'categories': category_list,}
+    top_3_quizzes = Quiz.objects.order_by('-views')[:3]
+    context_dict = { 'categories': category_list,
+                     'most_popular_quiz_1': top_3_quizzes[0],
+                     'most_popular_quiz_2': top_3_quizzes[1],
+                     'most_popular_quiz_3': top_3_quizzes[2] }
     
     return render(request, 'quizzit/home.html', context_dict)
 
@@ -89,17 +93,7 @@ def quiz(request, category_name_slug, quiz_name_slug):
 
             if (question.index == len(questions)):
                 total_score = sum(score_list)
-                
                 user_done = True
-        #     record_form = RecordForm(request.POST)
-        #     if (record_form.is_valid()):
-        #         record_form.index += 1
-        #         record = record_form.save()
-        #     else:
-        #         print(record_form.errors)
-        # else:
-        #     # If not a HTTP POST then render a blank form.
-        #     record_form = RecordForm()
 
         # .get() method returns only one object or a DoesNotExist exception
 

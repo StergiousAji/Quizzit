@@ -14,7 +14,9 @@ function countdown(elementName, minutes, seconds, criticalTimeSecs)
     function updateTimer() {
         msLeft = endTime - (+new Date);
         if (msLeft < 1000) {
-            window.location.reload();
+            home_url = document.getElementById("home-url").innerHTML;
+            window.location.replace(home_url);
+            alert("Oh nooo! You have run out of time! Please try again.")
         } else {
             time = new Date(msLeft);
             hours = time.getUTCHours();

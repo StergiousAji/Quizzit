@@ -19,16 +19,35 @@ img#center-logo {
 #rectangle1 { background-color: rgb(124, 14, 14); }
 #rectangle2{ background-color: rgb(128, 33, 56); }
 #rectangle3 { background-color: rgb(30, 14, 124); }
-/* Caption text */
-.text {
+/* Caption Title */
+#title {
     color: #f2f2f2;
-    font-size: 15px;
+    font-size: 30px;
     padding: 8px 12px;
     bottom: 8px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
+a.quiz_links {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+button.quiz_buttons {
+    font-size: 25px;
+    padding: 18px;
+    border: none;
+    cursor: pointer;
+}
+#quiz_1 { background-color: #10ac10; }
+#quiz_1:hover { background-color: #4bd44b; }
+#quiz_2 { background-color: #1b5b97; }
+#quiz_2:hover { background-color: #2075c5; }
+#quiz_3 { background-color: #d85c23; }
+#quiz_3:hover { background-color: #eb8454; }
 /* The dots/bullets/indicators */
 .dot {
     height: 15px;

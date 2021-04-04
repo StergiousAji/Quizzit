@@ -14,18 +14,29 @@
 
         <div class="mySlides fade">
             <div class="rectangles" id="rectangle1">
-                <div class="text">
-                    <h2>Popular Quizzes</h2>
-                </div>
+                <h1 id="title">Top Three Most Popular Quizzes:</h1>
+                <a class="quiz_links" href="{% url 'quizzit:quiz' most_popular_quiz_1.category.slug most_popular_quiz_1.slug %}">
+                    <button id="quiz_1" class="quiz_buttons">{{ most_popular_quiz_1.name }}</button>
+                </a>
             </div>
         </div>
 
         <div class="mySlides fade">
-            <div class="rectangles" id="rectangle2"></div>
+            <div class="rectangles" id="rectangle2">
+                <h1 id="title">Top Three Most Popular Quizzes:</h1>
+                <a class="quiz_links" href="{% url 'quizzit:quiz' most_popular_quiz_2.category.slug most_popular_quiz_2.slug %}">
+                    <button id="quiz_2" class="quiz_buttons">{{ most_popular_quiz_2.name }}</button>
+                </a>
+            </div>
         </div>
 
         <div class="mySlides fade">
             <div class="rectangles" id="rectangle3">
+                <h1 id="title">Top Three Most Popular Quizzes:</h1>
+                <a class="quiz_links" href="{% url 'quizzit:quiz' most_popular_quiz_3.category.slug most_popular_quiz_3.slug %}">
+                    <button id="quiz_3" class="quiz_buttons">{{ most_popular_quiz_3.name }}</button>
+                </a>
+            </div>
         </div>
 
         </div>
