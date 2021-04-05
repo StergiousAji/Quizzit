@@ -1,0 +1,71 @@
+{
+    "name": "Physics Easy Quiz ",
+    "difficulty": "EASY",
+    "category": "Physics",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Which of the following is a unit of electric current?",
+            "choiceA": "A: Ohm",
+            "choiceB": "B: Watt",
+            "choiceC": "C: Amp",
+            "choiceD": "D: Coulomb",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "Density is?",
+            "choiceA": "A: Volume times mass",
+            "choiceB": "B: Volume divide by mass",
+            "choiceC": "C: Mass times volume",
+            "choiceD": "D: Mass divided by volume",
+            "answer": "D"
+        },
+        {
+            "index": 3,
+            "text": "Which among the following is used during pregnancy to check on the development of the fetus?",
+            "choiceA": "A: Infra-red",
+            "choiceB": "B: Ultraviolet",
+            "choiceC": "C: Sound Waves",
+            "choiceD": "D: Microwaves",
+            "answer": "C"
+        },
+        {
+            "index": 4,
+            "text": "-400 Fahrenheit is equal to …",
+            "choiceA": "A: 40 Deg Centigrade",
+            "choiceB": "B: -40 Deg Centigrade",
+            "choiceC": "C: 0 Deg Centigrade",
+            "choiceD": "D: -100 Deg Centigrade",
+            "answer": "B"
+        },
+        {
+            "index": 5,
+            "text": "Law Of Inertia is explained by",
+            "choiceA": "A: First Law of Newton",
+            "choiceB": "B: Second Law of Newton",
+            "choiceC": "C: Law of Conservation",  
+            "choiceD": "D: Law of Momentum",
+            "answer": "A"
+        },
+        {
+            "index": 6,
+            "text": "Which among the following color lights has the shortest wavelength",
+            "choiceA": "A: Violet",
+            "choiceB": "B: Red",
+            "choiceC": "C: Green",
+            "choiceD": "D: Blue",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "A Fuse is used in an electric circuit to",
+            "choiceA": "A: Complete the circuit for flow of current ",
+            "choiceB": "B: Break the circuit when power gets off",
+            "choiceC": "C: Break the circuit when excessive current flows through the circuit",
+            "choiceD": "D: Indicate if the current is fluctuating",
+            "answer": "C"
+        }
+    ]
+}
