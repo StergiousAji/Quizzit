@@ -1,0 +1,71 @@
+{
+    "name": "Physics Medium",
+    "difficulty": "MEDIUM",
+    "category": "Physics",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Who had given the ‘Law of Electrostatic Attraction’",
+            "choiceA": "A: Newton",
+            "choiceB": "B: Galilee",
+            "choiceC": "C: Coulomb",
+            "choiceD": "D: Fresnel",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "Hydrometer measures?",
+            "choiceA": "A: Speed of river stream",
+            "choiceB": "B: Direction of river stream",
+            "choiceC": "C: Density of liquid",
+            "choiceD": "D: Viscosity of liquid",
+            "answer": "C"
+        },
+        {
+            "index": 3,
+            "text": "Who among the following has discovered long radio waves?",
+            "choiceA": "A: Herchel",
+            "choiceB": "B: Heinrich Hertz",
+            "choiceC": "C: Marconi",
+            "choiceD": "D: Newton",
+            "answer": "C"
+        },
+        {
+            "index": 4,
+            "text": "Which among the following is used to measure the relative density of liquid?",
+            "choiceA": "A: Hypsometer",
+            "choiceB": "B: Hygroscope",
+            "choiceC": "C: Hygrometer",
+            "choiceD": "D: Hydrometer",
+            "answer": "D"
+        },
+        {
+            "index": 5,
+            "text": "Which among the following is a secondary color?",
+            "choiceA": "A: Yellow",
+            "choiceB": "B: Blue",
+            "choiceC": "C: Red",
+            "choiceD": "D: White",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "Which of the following correctly defines the ‘nuclear force’?",
+            "choiceA": "A: It is repulsive",
+            "choiceB": "B: It is attractive",
+            "choiceC": "C: It is neutral",
+            "choiceD": "D: a & b bothr",
+            "answer": "D"
+        },
+        {
+            "index": 7,
+            "text": "Which among the following correctly defines the phenomenon in which three dimensional image is formed through penetration of two light beams from laser?",
+            "choiceA": "A: 3-D Photography",
+            "choiceB": "B: X-ray photography",
+            "choiceC": "C: Holography",
+            "choiceD": "D: Cinematography",
+            "answer": "C"
+        }
+    ]
+}

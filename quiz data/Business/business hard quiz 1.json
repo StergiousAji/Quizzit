@@ -1,0 +1,71 @@
+{
+    "name": "Business hard",
+    "difficulty": "HARD",
+    "category": "Business",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "What is the first step in a 'Stage gate' process?",
+            "choiceA": "A: Develop a product",
+            "choiceB": "B: Demonstrate a plan",
+            "choiceC": "C: Initiate learning",
+            "choiceD": "D: Generate ideas and concepts",
+            "answer": "D"
+        },
+        {
+            "index": 2,
+            "text": "Which is not an example of an external factor for learning and knowledge?",
+            "choiceA": "A: Demographic Change",
+            "choiceB": "B: Political Issues",
+            "choiceC": "C: Organisational Structure",
+            "choiceD": "D: Social Change",
+            "answer": "D"
+        },
+        {
+            "index": 3,
+            "text": "Which is not an implementation activity for an information system?",
+            "choiceA": "A: IS marketing plan",
+            "choiceB": "B: System documentation",
+            "choiceC": "C: Software development",
+            "choiceD": "D: User Training and development",
+            "answer": "A"
+        },
+        {
+            "index": 4,
+            "text": "Strategic decision making can take place at various levels of an organisation, what are the three most common? ",
+            "choiceA": "A: Operational, board, and industrially ",
+            "choiceB": "B: Governmental, locally, and individually",
+            "choiceC": "C: Corporate, Business, and Functional",
+            "choiceD": "D: Board of Directors, Chief Executive, and Junior Management",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "How might the size of a business be best measured? ",
+            "choiceA": "A: Number of employees, and overall gross profit",
+            "choiceB": "B: Number of outlets or business units and market value",
+            "choiceC": "C: Total revenue and capital investment",
+            "choiceD": "D: All of the above",
+            "answer": "D"
+        },
+        {
+            "index": 6,
+            "text": "PESTLE is an acronym for what? ",
+            "choiceA": "A: Political, environmental, technological, legal, and environmental",
+            "choiceB": "B: Political, environmental, shareholding, technological, logistical, and e-marketing",
+            "choiceC": "C: Political, environmental, social, technological, legal, and environmental",
+            "choiceD": "D: Political, environmental, societal, technological, learning, and e-marketing ",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "The business model canvas describes an organisation’s or a product’s what? ",
+            "choiceA": "A: Value proposition, infrastructure, customers, and finances",
+            "choiceB": "B: Marketing Plan",
+            "choiceC": "C: Value proposition, infrastructure, and markets ",
+            "choiceD": "D: All of the above ",
+            "answer": "A"
+        }
+    ]
+}

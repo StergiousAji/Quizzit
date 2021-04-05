@@ -1,0 +1,71 @@
+{
+    "name": "Business Easy Quiz ",
+    "difficulty": "EASY",
+    "category": "Business",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "All Business have an aim to make profit for their owners?",
+            "choiceA": "A: True",
+            "choiceB": "B: Both",
+            "choiceC": "C: False",
+            "choiceD": "D: None",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "A Sole Trader is?",
+            "choiceA": "A: Sets up the safest form of business organization",
+            "choiceB": "B: Is Legally liable for any debts of the business",
+            "choiceC": "C: Forms a business with another single person",
+            "choiceD": "D: Has exclusive responsibility for running the business",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "In Comparison to other forms of businesses, sole proprietors face the problem of?",
+            "choiceA": "A: Specialization",
+            "choiceB": "B: Continuity",
+            "choiceC": "C: Administration set up procedures",
+            "choiceD": "D: Privacy of Account",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "Which of the following is least likely to be classed as a non-profit organization?",
+            "choiceA": "A: Private fee paying schools or colleges",
+            "choiceB": "B: Charities",
+            "choiceC": "C: Consultancy Services",
+            "choiceD": "D: Pressure Groups",
+            "answer": "C"
+        },
+        {
+            "index": 5,
+            "text": "The number of partners a partnership can legally have is between?",
+            "choiceA": "A: 2-60",
+            "choiceB": "B: 2-20",
+            "choiceC": "C: 2-50",  
+            "choiceD": "D: 1-20",
+            "answer": "B"
+        },
+        {
+            "index": 6,
+            "text": "PLC means?",
+            "choiceA": "A: Public Liable Company",
+            "choiceB": "B: Public Limited Company",
+            "choiceC": "C: Private Limited Company",
+            "choiceD": "D: Private Liable Corporation",
+            "answer": "A"
+        },
+        {
+            "index": 7,
+            "text": "A person who organizes, manages and assumes the risks of starting and operating a business to make a profit is called a?",
+            "choiceA": "A: Entrepreneur ",
+            "choiceB": "B: Investor",
+            "choiceC": "C: Speculator",
+            "choiceD": "D: Small Business Person",
+            "answer": "A"
+        }
+    ]
+}

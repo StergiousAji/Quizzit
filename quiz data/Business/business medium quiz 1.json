@@ -1,0 +1,71 @@
+{
+    "name": "Business Medium",
+    "difficulty": "MEDIUM",
+    "category": "Business",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "Which of the following is not a characteristic of a small business?",
+            "choiceA": "A: Independently owned and operated",
+            "choiceB": "B: Dominant in its field",
+            "choiceC": "C: Meets certain standards in terms of size",
+            "choiceD": "D: All of the above",
+            "answer": "B"
+        },
+        {
+            "index": 2,
+            "text": "A person is employed in a corporation to launch new products. He is a?",
+            "choiceA": "A: Entrepreneur",
+            "choiceB": "B: Intrapreneur",
+            "choiceC": "C: Innovator",
+            "choiceD": "D: Franchisor",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "Which characteristic would likely be found in an industry dominated by small business firms?",
+            "choiceA": "A: Little capital required",
+            "choiceB": "B: Intrapreneur",
+            "choiceC": "C: Innovator",
+            "choiceD": "D: Franchisor",
+            "answer": "B"
+        },
+        {
+            "index": 4,
+            "text": "Which characteristic would likely be found in an industry dominated by small business firms?",
+            "choiceA": "A: Little capital required",
+            "choiceB": "B: Capital intensive",
+            "choiceC": "C: Labour intensive",
+            "choiceD": "D: None of the above",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "Which of the following is not a common reason for small-business failure?",
+            "choiceA": "A: Lack of interest",
+            "choiceB": "B: lack of necessary personnel",
+            "choiceC": "C: lack of experience",
+            "choiceD": "D: poor allocation of time",
+            "answer": "A"
+        },
+        {
+            "index": 6,
+            "text": "Functional Structures help to create?",
+            "choiceA": "A: Teamwork",
+            "choiceB": "B: Specialisation",
+            "choiceC": "C: Project work groups",
+            "choiceD": "D: Multi-skilled employees",
+            "answer": "B"
+        },
+        {
+            "index": 7,
+            "text": "What is not an advantage of a hierarchical structure?",
+            "choiceA": "A: Clear chain of command",
+            "choiceB": "B: Quick response to change",
+            "choiceC": "C: Discipline and stability",
+            "choiceD": "D: Small span of control",
+            "answer": "B"
+        }
+    ]
+}

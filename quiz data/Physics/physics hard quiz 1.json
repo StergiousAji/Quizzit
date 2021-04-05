@@ -1,0 +1,71 @@
+{
+    "name": "Physics hard",
+    "difficulty": "HARD",
+    "category": "Physics",
+    "views": 0,
+    "questions": [
+        {
+            "index": 1,
+            "text": "If container filled with gas put into a fast moving train then the temperature of the gas will..",
+            "choiceA": "A: Increase",
+            "choiceB": "B: Decrease",
+            "choiceC": "C: Remain the same",
+            "choiceD": "D: Depend on the type of gas",
+            "answer": "C"
+        },
+        {
+            "index": 2,
+            "text": "Who had given the ‘Law of Electric Resistance’",
+            "choiceA": "A: Faraday",
+            "choiceB": "B: Ohm",
+            "choiceC": "C: Weber",
+            "choiceD": "D: Kelvin",
+            "answer": "B"
+        },
+        {
+            "index": 3,
+            "text": "A Liquid drop attains spherical shape because of?",
+            "choiceA": "A: Cohesive force",
+            "choiceB": "B: Adhesive force",
+            "choiceC": "C: Surface tension",
+            "choiceD": "D: Gravitation force",
+            "answer": "C"
+        },
+        {
+            "index": 4,
+            "text": "Who had invented the first vapor compression refrigeration system?",
+            "choiceA": "A: Harrison",
+            "choiceB": "B: Hunt",
+            "choiceC": "C: Volvo",
+            "choiceD": "D: Gillette",
+            "answer": "A"
+        },
+        {
+            "index": 5,
+            "text": "Which of the following waves possess the lowest wavelengths?",
+            "choiceA": "A: Gamma Rays",
+            "choiceB": "B: Radio Waves",
+            "choiceC": "C: X rays",
+            "choiceD": "D: Ultraviolet Rays",
+            "answer": "A"
+        },
+        {
+            "index": 6,
+            "text": "What US city is the post-apocalyptic setting for the 2014 science-fiction film 'Divergent'?",
+            "choiceA": "A: Atlanta",
+            "choiceB": "B: Baltimore",
+            "choiceC": "C: Chicago",
+            "choiceD": "D: Dundee",
+            "answer": "C"
+        },
+        {
+            "index": 7,
+            "text": "Which among the following is used to measure heat radiation?",
+            "choiceA": "A: Anemometer",
+            "choiceB": "B: Barograph",
+            "choiceC": "C: Bolometer",
+            "choiceD": "D: Callipers",
+            "answer": "C "
+        }
+    ]
+}

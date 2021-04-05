@@ -12,7 +12,11 @@ category_list = Category.objects.all()
 
 # Create your views here.
 def home(request):
-    context_dict = {'categories': category_list,}
+    top_3_quizzes = Quiz.objects.order_by('-views')[:3]
+    context_dict = { 'categories': category_list,
+                     'most_popular_quiz_1': top_3_quizzes[0],
+                     'most_popular_quiz_2': top_3_quizzes[1],
+                     'most_popular_quiz_3': top_3_quizzes[2] }
     
     return render(request, 'quizzit/home.html', context_dict)
 
@@ -132,9 +136,8 @@ def quiz(request, category_name_slug, quiz_name_slug, global_data={'index':0, 'c
         'start_time': start_time,
         'finished': False,
     }
-
+    
     return render(request, 'quizzit/quiz.html', context=context_dict)
-
 
 
 def howtoplay(request):

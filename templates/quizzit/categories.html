@@ -14,7 +14,20 @@
     <div class="categories-container">
         {% if categories %}
             {% for c in categories %}
-                <a href="{% url 'quizzit:show_category' c.slug %}"><button class="buttons">{{ c.name }}</button></a>
+                <a href="{% url 'quizzit:show_category' c.slug %}">
+                    <div class="container">
+                        <div class ="card">
+                                <div class="difficulty">
+                                    <h2>{{ c.name }}</h2>
+                                    <div class="level">
+                                        <span>Easy</span>
+                                        <span>Med</span>
+                                        <span>Hard</span>
+                                    </div>
+                                </div>
+                                </div>
+<!--                    <button class="buttons">{{ c.name }}</button></a>-->
+                        
             {% endfor %}
         {% else %}
             <h1>There are no categories to show.</h1>
