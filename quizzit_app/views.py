@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from quizzit_app.models import Category, Record, Quiz, Question, Register_User, UserProfile
 from quizzit_app.forms import UserForm, UserProfileForm, RecordForm
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
-
+import itertools
 
 category_list = Category.objects.all()
 
@@ -26,12 +26,7 @@ def categories(request):
     
     return render(request, 'quizzit/categories.html', context_dict)
 
-# Global Variable index to display correct Question.
-index = 0
-score = 0
-score_list = []
-user_done = False
-total_score = 0
+
 def show_category(request, category_name_slug):
     context_dict = {'categories': category_list,}
     # .get() method returns only one object or a DoesNotExist exception
@@ -44,90 +39,109 @@ def show_category(request, category_name_slug):
     except Category.DoesNotExist:
         context_dict['category'] = None
         context_dict['quiz'] = None
-    
-    # Reset the Question index and booleans
-    global index, score, score_list, user_done, total_score
-    index = 0
-    score = 0
-    user_done = False
-    total_score = 0
-    score_list = []
-    for i in range(7):
-        score_list.append(0)
 
     return render(request, 'quizzit/category.html', context=context_dict)
 
-def quiz(request, category_name_slug, quiz_name_slug):
-    context_dict = {'categories': category_list,}
-    global index, score, score_list, user_done, total_score
-    try:
-        quiz = Quiz.objects.get(slug=quiz_name_slug)
-        quiz.views += 1
-        quiz.save()
 
-        questions = Quiz.objects.get(quizID=quiz.quizID).question_set.all()
+# use mutable default arguments as global variables
+def quiz(request, category_name_slug, quiz_name_slug, global_data={'index':0, 'chosen_ans':[]}):
+    quiz = Quiz.objects.get(slug=quiz_name_slug)
+    questions = quiz.question_set.all()
 
-        record = None
-        if (request.is_ajax() ):
-            data = request.POST
-            data_ = dict(data.lists())
-            data_.pop('csrfmiddlewaretoken')
-            print(data_)
-            user = request.user
-            
-            question_text = list(data_.keys())[0]
-            question = Question.objects.get(question_text=question_text)
-            user_answer = data_[question_text]
-            index = int(data_['index'][0])
+    point = {
+        Quiz.EASY: 100,
+        Quiz.MED: 200,
+        Quiz.HARD: 300,
+    }[quiz.difficulty]
 
-            print("User Answer: " + user_answer[0][0] + " | Correct Answer: " + question.answer)
-            print(index-1)
-            if (user_answer[0][0] == question.answer and score_list[index-1] == 0):
-                score_list[index-1] = 1
-            
-            print("Score: " + str(score_list))
+    start_time = {
+        Quiz.EASY: 3 * 60,
+        Quiz.MED: 6 * 60,
+        Quiz.HARD: 10 * 60,
+    }[quiz.difficulty]
 
-            if (question.index == len(questions)):
-                total_score = sum(score_list)
-                
-                user_done = True
-        #     record_form = RecordForm(request.POST)
-        #     if (record_form.is_valid()):
-        #         record_form.index += 1
-        #         record = record_form.save()
-        #     else:
-        #         print(record_form.errors)
-        # else:
-        #     # If not a HTTP POST then render a blank form.
-        #     record_form = RecordForm()
 
-        # .get() method returns only one object or a DoesNotExist exception
+    # if called by clicking the next button
+    if request.POST.get('isNextClicked', False): 
+        data = request.POST
+        global_data['chosen_ans'].append( data['chosenAnswer'] )
 
-        # Only set the current question if index is less than number of questions.
-        if (index < len(questions)):
-            question = questions[index]
-        else:
-            question = None
+        global_data['index'] += 1
+        question = questions[global_data['index']]
 
-        context_dict['category_name_slug'] = category_name_slug
-        # context_dict['record_form'] = record_form
-        context_dict['quiz'] = quiz
-        context_dict['question'] = question
-        context_dict['index'] = index
-        context_dict['num_of_questions'] = len(questions)
-        context_dict['user_done'] = user_done
-        context_dict['user_score'] = total_score
-    except Category.DoesNotExist:
-        context_dict['quiz'] = None
-        context_dict['question'] = None
-        context_dict['index'] = None
+        response_dict = {
+            'question_text': question.question_text,
+            'index': question.index,
+            'choiceA': question.choiceA,
+            'choiceB': question.choiceB,
+            'choiceC': question.choiceC,
+            'choiceD': question.choiceD,
+            'chosenAnswer': '',
+            'isLast': global_data['index'] == len(questions) - 1,
+        }
+
+        return JsonResponse(response_dict, safe=False)
+
+
+    # if called by clicking the finish button
+    if request.POST.get('isFinishClicked', False): 
+        data = request.POST
+        global_data['index'] += 1
+        global_data['chosen_ans'].append( data['chosenAnswer'] )
+
+        time_remain = int(data['timeRemain'])        
+        score = 0
+        weight = 0.5
+        for ans, question in zip(global_data['chosen_ans'], questions):
+            if ans == question.answer:
+                score += point
+        score = int( score * (1 + time_remain/start_time * weight) )
+
+        time_remain = '{}:{}'.format(str(time_remain//60), str(time_remain%60).zfill(2))
+
+        ques_and_anss = itertools.zip_longest(questions, global_data['chosen_ans'], fillvalue='')
+        ques_and_anss = [(x, 'Not Answered') if y == '' else (x,y) for x,y in ques_and_anss]
+        
+        context_dict = {
+            'quiz': quiz,
+            'finished': True,
+            'ques_and_anss': ques_and_anss,
+            'time_remain': time_remain,
+            'question_score': point,
+            'score': score,
+        }
+        
+        response = render(request, 'quizzit/quiz.html', context=context_dict)
+        html_str = response.content
+        # slice the byte string such that it only contains the <body> section
+        response.content = html_str[html_str.find(b'<body>'): html_str.find(b'</body>')+len(b'</body>')]
+
+        return response
+
+
+    ## when the page is first loaded or reloaded
+    # reset the global values
+    global_data['index'] = 0
+    global_data['chosen_ans'] = []
+    
+    context_dict = {
+        'category_name_slug': category_name_slug,
+        'quiz': quiz,
+        'question': questions[global_data['index']],
+        'num_of_questions': len(questions),
+        'start_time': start_time,
+        'finished': False,
+    }
 
     return render(request, 'quizzit/quiz.html', context=context_dict)
+
+
 
 def howtoplay(request):
     context_dict = {'categories': category_list,}
     
     return render(request, 'quizzit/howtoplay.html', context_dict)
+
 
 def register(request):
     registered = False
@@ -158,6 +172,7 @@ def register(request):
         profile_form = UserProfileForm()
     
     return render(request, 'quizzit/register.html', {'user_form': user_form , 'profile_form': profile_form, 'registered': registered, 'categories': category_list,})
+
 
 def user_login(request):
     invalid_login = False
@@ -191,3 +206,5 @@ def leaderboards(request):
     context_dict = {'categories': category_list,}
     
     return render(request, 'quizzit/leaderboards.html', context_dict)
+
+

@@ -1,81 +1,105 @@
-function countdown(elementName, minutes, seconds, criticalTimeSecs)
-{
-    let element, endTime, hours, mins, msLeft, time;
 
-    element = document.getElementById(elementName);
-    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-    criticalTime = (new Date(1000*(criticalTimeSecs) + 500))
-    updateTimer();
+var chosenAnswer = null;
 
-    function twoDigits(n) {
-        return (n <= 9 ? "0" + n : n);
+
+window.onbeforeunload = function() {
+    console.log('reload page?');
+    return "Do you really want to leave the page?"
+};
+
+
+// override
+function stopTimer(timerIntervalId) {
+    clearInterval(timerIntervalId);
+    if (timeLeft == 0) {
+        document.getElementById('finish-btn').click();
     }
-
-    function updateTimer() {
-        msLeft = endTime - (+new Date);
-        if (msLeft < 1000) {
-            window.location.reload();
-        } else {
-            time = new Date(msLeft);
-            hours = time.getUTCHours();
-            mins = time.getUTCMinutes();
-            element.innerHTML = (hours ? hours + ':' + twoDigits(mins) : mins) + ':' + twoDigits(time.getUTCSeconds());
-            setTimeout(updateTimer, time.getUTCMilliseconds() + 500);
-        }
-
-        if (msLeft < criticalTime) {
-            element.style.color = '#b00505';
-            element.style.borderColor = '#b00505';
-        }
-    }
+    return timeLeft
 }
 
-countdown("ten-countdown", 0, 30, 5);
 
-const url = window.location.href;
-let chosenAnswer = null;
-function chooseButton(button) {
-    // Reset All Choice Buttons
-    choiceButtons = document.getElementsByClassName('mc-buttons');
+function reset_mc_btn() {
+    let choiceButtons = document.getElementsByClassName('mc-buttons');
     for (i = 0; i < choiceButtons.length; i++) {
         choiceButtons[i].style.borderColor = '#000000';
         choiceButtons[i].style.color = '#000000';
     }
-
-    button.style.borderColor = '#ffffff';
-    button.style.color = '#ffffff';
-
-    //Save Chosen Answer
-    chosenAnswer = button.innerHTML;
+    chosenAnswer = null;
 }
 
-let question = document.getElementById('txtQuestion').innerHTML;
-let index = parseInt(document.getElementById('index').innerHTML);
-const csrf = document.getElementsByName('csrfmiddlewaretoken');
-console.log(question);
-console.log(index);
 
-function send_request() {
-    const data = {};
-    data['csrfmiddlewaretoken'] = csrf[0].value;
-    data[question] = chosenAnswer;
-    data['index'] = index;
-    console.log(data)
+document.querySelectorAll('.mc-buttons').forEach(item => {
+    item.addEventListener('click', function() {
+        reset_mc_btn();
 
-    $.ajax({
-        type: 'POST',
-        url: `${url}`,
-        data: data,
-        success: function(response) {
-            console.log(response);
-        },
-        error: function(error) {
-            console.log(error);
-        }
+        item.style.borderColor = '#ffffff';
+        item.style.color = '#ffffff';
+
+        //Save Chosen Answer
+        chosenAnswer = item.getAttribute("data-choice");
     })
-}
+})
 
-function next() {
-    send_request();
-    window.location.reload();
-}
+
+$(document).ready(function(){
+    const url = window.location.href;
+    const csrf_token = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+
+    let startTime = document.getElementById('timer').getAttribute("data-start-time"); 
+    // startTimer in 'circular timer,js'
+    let timerIntervalId = startTimer('timer', startTime, '200px')
+
+
+    $('#next-btn').click(function() {   
+        $.post(
+            `${url}`,                            // url
+            {                                    // data to be submit
+                'csrfmiddlewaretoken': csrf_token,
+                'isNextClicked': true,
+                'chosenAnswer': chosenAnswer,
+            },    
+            function(question, status, xhr) {    // success callback function
+                console.log('Next question succeeded.');
+
+                // change the question's text and choices
+                $('#txtQuestion').text('Q' + question['index'].toString() + ': ' + question['question_text']);
+                $('#btnChoiceA').text(question['choiceA']);
+                $('#btnChoiceB').text(question['choiceB']);
+                $('#btnChoiceC').text(question['choiceC']);
+                $('#btnChoiceD').text(question['choiceD']);
+                
+                $('#index-indicator').text(question['index']);
+                
+                // change the button to finish button at the last question
+                if (question['isLast']) {
+                    document.getElementById('finish-btn').style.display = "block";
+                    document.getElementById('next-btn').style.display = "none";
+                };
+            },
+            'json',    // response data format
+        ).fail(function(jqxhr, settings, ex) { console.log('Next question failed, ' + ex); }); 
+
+        reset_mc_btn();
+    });
+
+
+
+    $(document).on("click", "#finish-btn", function(e){
+        let timeRemain = stopTimer(timerIntervalId)
+        $.post(
+            `${url}`,    // url
+            {            // data to be submit
+                'csrfmiddlewaretoken': csrf_token,
+                'isFinishClicked': true,
+                'chosenAnswer': chosenAnswer,
+                'timeRemain': timeRemain
+            },
+            function(data) {
+                console.log('Finish succeeded.');
+                $("body").html(data);
+                window.onbeforeunload = null;
+            }, 
+        ).fail(function(jqxhr, settings, ex) { console.log('Finish failed, ' + ex); });      
+    });
+});
+

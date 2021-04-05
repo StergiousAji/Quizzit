@@ -2,6 +2,7 @@
 {% load staticfiles %}
 
 {% block link_block %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/circular timer.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/quiz.css' %}"/>
 {% endblock %}
 
@@ -14,50 +15,74 @@
 {% endblock %}
 
 {% block body_block %}
-    {% if user_done == False %}
-        {% if question %}
-            <div class="timer">
-                <p id="ten-countdown"></p>
-            </div>
 
-            <div class="question-container">
-                <h1 id="txtQuestion">{{ question.question_text }}</h1>
-            </div>
+    {% if finished %}
+        <h1>Result</h1> 
+            
+        {% for que, ans in ques_and_anss%}  
+            {% if que.answer == ans %}
+                {% firstof 'question-correct' as class_name %}
+                {% firstof question_score as score_var %}
+            {% else %}
+                {% firstof 'question-wrong' as class_name %}
+                {% firstof '0' as score_var %}
+            {% endif %}
 
-            <div class="multiple-choice-container" id="1">
-                <button class="mc-buttons" id="btnChoiceA" onclick="chooseButton(this)">{{ question.choiceA }}</button>
-                <button class="mc-buttons" id="btnChoiceB" onclick="chooseButton(this)">{{ question.choiceB }}</button>
-            </div>
-            <div class="multiple-choice-container" id="2">
-                <button class="mc-buttons" id="btnChoiceC" onclick="chooseButton(this)">{{ question.choiceC }}</button>
-                <button class="mc-buttons" id="btnChoiceD" onclick="chooseButton(this)">{{ question.choiceD }}</button>
-            </div>
+            <div class='{{ class_name }}'>
+                <p>Q{{que.index}}: {{que.question_text}}</p>
+                
+                <ul class="question-row2">
+                    <li class="flex-item">Correct Answer: {{que.answer}}</li>
+                    <li class="flex-item">Your Answer: {{ans}}</li>
+                    <li class="flex-item">Socre: {{ score_var }} </li>
+                </ul>
+            </div>    
+        {% endfor %}
 
-            <div class="control-question-container">
-                <p>{{ question.index }}/{{ num_of_questions }}</p>
-                <p>{{ record_form }}</p>
+        <div class='result-bottom'>
+            <p style='text-align: left; font-size: 20px;'>Time Remaining: {{ time_remain }}</p>
+            <p class='rounded-border'>Total Score: {{ score }}</p>
+            <a class='finish button-base-style' href="{% url 'quizzit:home' %}">Home</a>
+        </div>
+        
 
-                {% if question.index == num_of_questions %}
-                    <form method="post">
-                        {% csrf_token %}
-                        <a class="finish" type="submit" onclick="next()" href="{% url 'quizzit:quiz' category_name_slug quiz.slug %}">Finish</a>
-                    </form>
-                {% else %}
-                    <form method="post">
-                        {% csrf_token %}
-                        <a class="next" type="submit" onclick="next()" href="{% url 'quizzit:quiz' category_name_slug quiz.slug %}">Next &#8250;</a>
-                    </form>
-                {% endif %}
-            </div>
-
-            <span id="index" style="visibility: hidden">{{ question.index }}</span>
-
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-            <script type="text/javascript" src="{% static 'js/quiz.js' %}"></script>
-        {% else %}
-            There is no question to show.
-        {% endif %}
     {% else %}
-        <h1>Score: {{ user_score }}</h1>
+
+        <div id="timer" data-start-time="{{ start_time }}"></div>
+
+        <div class="question-container">
+            <h1 id="txtQuestion">Q{{ question.index }}: {{ question.question_text }}</h1>
+        </div>
+
+        <div class="multiple-choice-container">
+            <button class="mc-buttons" id="btnChoiceA" data-choice="A">{{ question.choiceA }}</button>
+            <button class="mc-buttons" id="btnChoiceB" data-choice="B">{{ question.choiceB }}</button>
+        </div>
+        <div class="multiple-choice-container">
+            <button class="mc-buttons" id="btnChoiceC" data-choice="C">{{ question.choiceC }}</button>
+            <button class="mc-buttons" id="btnChoiceD" data-choice="D">{{ question.choiceD }}</button>
+        </div>
+
+        <div class="control-question-container">
+            {% csrf_token %}
+
+            <div></div>
+
+            <p><span id="index-indicator">{{ question.index }}</span>/{{ num_of_questions }}</p>
+
+            <button class="next button-base-style" id="next-btn">Next &#8250;</button>
+
+            <button class="finish button-base-style" id="finish-btn" style="display: none">Finish</button>
+        </div>
+
     {% endif %}
+
 {% endblock %}
+
+
+{% block extra_script %}
+    <script type="text/javascript" src="{% static 'js/circular timer.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/quiz.js' %}"></script>
+{% endblock %}
+
+
