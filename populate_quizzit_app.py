@@ -259,8 +259,8 @@ def test():
 # Start execution here!
 if __name__ == '__main__':
     print('Starting quizzit_app population script...')
-    # populate()
-    test()
+    populate()
+    # test()
     # create_json_template(r'quiz data/Chemistry/Chemitry hard quiz 1.json')
 
 
