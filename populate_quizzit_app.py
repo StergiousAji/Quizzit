@@ -66,25 +66,6 @@ def populate():
             print(f'- added Question: {que} to {q}')
 
 
-    # record_list = [
-    #     {'user': 'Alice',
-    #      'quiz': 1,
-    #      'score': 10},
-    #     {'user': 'Bob',
-    #      'quiz': 2,
-    #      'score': 20},
-    #     {'user': 'Charlie',
-    #      'quiz': 3,
-    #      'score': 30},
-    # ]
-
-    # for record in record_list:
-    #     reg_user_obj = Register_User.objects.get(username=record['username'])
-    #     quiz_obj = Quiz.objects.get(quizID=record['quizID'])
-    #     r = add_record(reg_user_obj, quiz_obj, record['score'])
-
-    #     print(f'- added Record: {r}')
-
 
 
 def add_reg_user(username, email, password, admin=False):
@@ -234,34 +215,12 @@ def create_json_template(file_path):
 
 
 
-############################## remember to delete ####################################
-def test():
-    cate_obj = Category.objects.get(name='History')
-
-    print('--', Category.objects.get(name='History').quiz_set.all())
-    print('--', Quiz.objects.filter(category__name='History', difficulty='EASY'))
-
-    print('--', Quiz.objects.all())
-    print('--')
-    quiz_obj = Quiz.objects.get(quizID='HIST-M-01')
-    print('-- {}, {}, {}'.format(quiz_obj, type(quiz_obj), quiz_obj.id))
-    print('-- {}, {}, {}'.format(quiz_obj.name, quiz_obj.difficulty, quiz_obj.category))
-    print('--', quiz_obj.views)
-    print('--', quiz_obj.question_set.all()[0])
-    print('--', quiz_obj.question_set.get(index=1))
-    print('--', Question.objects.all())
-
-
-########################################################################################
-
-
 
 # Start execution here!
 if __name__ == '__main__':
     print('Starting quizzit_app population script...')
     populate()
-    # test()
-    # create_json_template(r'quiz data/Chemistry/Chemitry hard quiz 1.json')
+    
 
 
 

@@ -68,9 +68,9 @@ def quiz(request, category_name_slug, quiz_name_slug, global_data={'index':0, 'c
     # if called by clicking the next button
     if request.POST.get('isNextClicked', False): 
         data = request.POST
+        global_data['index'] += 1
         global_data['chosen_ans'].append( data['chosenAnswer'] )
 
-        global_data['index'] += 1
         question = questions[global_data['index']]
 
         response_dict = {
@@ -80,7 +80,6 @@ def quiz(request, category_name_slug, quiz_name_slug, global_data={'index':0, 'c
             'choiceB': question.choiceB,
             'choiceC': question.choiceC,
             'choiceD': question.choiceD,
-            'chosenAnswer': '',
             'isLast': global_data['index'] == len(questions) - 1,
         }
 
@@ -96,12 +95,14 @@ def quiz(request, category_name_slug, quiz_name_slug, global_data={'index':0, 'c
         time_remain = int(data['timeRemain'])        
         score = 0
         weight = 0.5
+        # add the point if the answers are correct
         for ans, question in zip(global_data['chosen_ans'], questions):
             if ans == question.answer:
                 score += point
+        # increase the score base on the remaning time
         score = int( score * (1 + time_remain/start_time * weight) )
 
-        time_remain = '{}:{}'.format(str(time_remain//60), str(time_remain%60).zfill(2))
+        formatted_time = '{}:{}'.format(str(time_remain//60), str(time_remain%60).zfill(2))
 
         ques_and_anss = itertools.zip_longest(questions, global_data['chosen_ans'], fillvalue='')
         ques_and_anss = [(x, 'Not Answered') if y == '' else (x,y) for x,y in ques_and_anss]
@@ -110,7 +111,7 @@ def quiz(request, category_name_slug, quiz_name_slug, global_data={'index':0, 'c
             'quiz': quiz,
             'finished': True,
             'ques_and_anss': ques_and_anss,
-            'time_remain': time_remain,
+            'time_remain': formatted_time,
             'question_score': point,
             'score': score,
         }

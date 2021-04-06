@@ -34,13 +34,13 @@
                 <ul class="question-row2">
                     <li class="flex-item">Correct Answer: {{que.answer}}</li>
                     <li class="flex-item">Your Answer: {{ans}}</li>
-                    <li class="flex-item">Socre: {{ score_var }} </li>
+                    <li class="flex-item">Score: {{ score_var }} </li>
                 </ul>
             </div>    
         {% endfor %}
 
         <div class='result-bottom'>
-            <p style='text-align: left; font-size: 20px;'>Time Remaining: {{ time_remain }}</p>
+            <p style='text-align: left; font-size: 20px;'>Time Remaining: {{ formatted_time }}</p>
             <p class='rounded-border'>Total Score: {{ score }}</p>
             <a class='finish button-base-style' href="{% url 'quizzit:home' %}">Home</a>
         </div>
