@@ -26,9 +26,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'bkmxx0i341+qy6a7q78=ki=gm*cepww7bihtwp!5rv^r$o2n%b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eric2767.pythonanywhere.com']
 
 
 # Application definition
@@ -130,4 +130,4 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
-LOGIN_URL = 'rango:login'
+LOGIN_URL = 'quizzit:login'
