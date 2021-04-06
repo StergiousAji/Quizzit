@@ -24,7 +24,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 key = None
-with open('secret.key') as f:
+with open(os.path.join(BASE_DIR, 'Quizzit', 'secret.key')) as f:
     key = f.read().strip()  
 SECRET_KEY = key
 
@@ -32,7 +32,7 @@ SECRET_KEY = key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['eric2767.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'eric2767.pythonanywhere.com']
 
 
 # Application definition
