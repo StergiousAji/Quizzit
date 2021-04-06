@@ -111,7 +111,7 @@ def quiz(request, category_name_slug, quiz_name_slug, global_data={'index':0, 'c
             'quiz': quiz,
             'finished': True,
             'ques_and_anss': ques_and_anss,
-            'time_remain': formatted_time,
+            'formatted_time': formatted_time,
             'question_score': point,
             'score': score,
         }
